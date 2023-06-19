@@ -75,6 +75,70 @@ let JSS2comTst = [
       a: "iphone",
       opt: ["stones","pebbles","iphone","fingers"]},
 ]
+let JSS2bscTst = [
+    {title: "JSS2 Basic Science Test",
+      category: "Tests",
+    
+      q: "What is the valency of Aluminium?",
+      a: "3",
+      opt: ["2","3","4","5"]},
+    {
+      q: "What is the atomic number of Oxygen?",
+      a: "8",
+      opt: ["0","16","8","6"]},
+    {
+      q: "What is the latin name for tin?",
+      a: "stannum",
+      opt: ["katium","aurum","stannum","cuprum"]},
+    {
+      q: "A formula is a shorthand representation of _____.",
+      a: "number of atoms in a molecule of a compound",
+      opt: ["number of atoms in a molecule of a compound","number of molecules in an atom of a compound","number of compounds in an element of a molecule","all of the above"]},
+    {
+      q: "One of the following is not a way a molecule can be represented.",
+      a: "molecular molecules",
+      opt: ["molecular model","molecular formula","molecular structure","molecular molecules"]},
+    {
+      q: "All of the following are compounds, except _____.",
+      a: "petroleum",
+      opt: ["petroleum","table salt","CO<sub>2</sub>","H<sub>2</sub>SO<sub>4</sub>"]},
+    {
+      q: "The components of compounds are combined in what way?",
+      a: "chemically",
+      opt: ["chemically","emotionally","physically","none of the above"]},
+    {
+      q: "How are mixtures components are combined?",
+      a: "physically",
+      opt: ["chemically","emotionally","physically","none of the above"]},
+    {
+      q: "Electrons at the outtermost shell of an atom are called ____.",
+      a: "valence electrons",
+      opt: ["compound electrons","valence electrons","orbital electrons","mixture electrons"]},
+    {
+      q: "All of the following are mixtures, except _____.",
+      a: "water",
+      opt: ["petroleum","tea","saline","water"]},
+    {
+      q: "What is the symbol for Copper?",
+      a: "Cu",
+      opt: ["C","Co","Cu","Cp"]},
+    {
+      q: "What is the symbol for Silicon?",
+      a: "Si",
+      opt: ["Si","SI","si","sI"]},
+    {
+      q: "Translate the latin element name 'Argentum' to english.",
+      a: "silver",
+      opt: ["silver","copper","lead","gold"]},
+    {
+      q: "What is the symbol for Gold?",
+      a: "Au",
+      opt: ["Ag","Au","G","Gd"]},
+    {
+      q: "One of these is not how chemical symbols of elements are derived.",
+      a: "from Nigerian name",
+      opt: ["from latin name","from Nigerian name","from first letter of element","from two letters of element name"]},
+]
 
 let JSS3comTst = [
     {title: "JSS3 Computer Science Test",
@@ -104,4 +168,68 @@ let SS1comTst = [
         q: "What is the full name of your Computer Teacher?",
         a: "Joshua Uchenna Ngwuoke",
         opt: ["Joshua Uchenna Ngwuoke","Joshua Uchenna Ugwuoke","Joshua Uchechi Ngwuoke","Joshua Uchechi Ugwoke"]},
+]
+let SS1ahTst = [
+    {title: "SS1 Animal Husbandry Test",
+      category: "Tests",
+    
+      q: "All these are systems in the body of a farm animal, except _____ system.",
+      a: "egestive",
+      opt: ["skeletal","endocrine","respiratory","egestive"]},
+    {
+      q: "Excretion is the process by which living things pass out ____ products.",
+      a: "waste",
+      opt: ["waste","excess","unprocessed","solid"]},
+    {
+      q: "All of the skin components are dead, except ____ layer.",
+      a: "malpigian",
+      opt: ["cornified","granular","malpigian","papillary"]},
+    {
+      q: "The ____ is the true skin.",
+      a: "dermis",
+      opt: ["recticular layer","epidermis","melanin","dermis"]},
+    {
+      q: "The following are layers of the epidermis, except _____ layer.",
+      a: "papillary",
+      opt: ["cornified","granular","malpigian","papillary"]},
+    {
+      q: "Which of these is not found in the papillary layer?",
+      a: "erector muscles",
+      opt: ["feathers","scales","erector muscles","hairs"]},
+    {
+      q: "The removal of a farm animal's horn is called ____.",
+      a: "dehorning",
+      opt: ["dehorning","rehorning","inhorning","unhorning"]},
+    {
+      q: "Bones are joined to bones by _____.",
+      a: "ligaments",
+      opt: ["tendons","ligaments","cartilages","arteries"]},
+    {
+      q: "Where in the body of a farm animal is blood formed?",
+      a: "bone marrow",
+      opt: ["bone joints","bone surface","bone marrow","tendons"]},
+    {
+      q: "The removal of a farm animal's nail is called ____.",
+      a: "despuring",
+      opt: ["denailing","dispuring","desnailing","despuring"]},
+    {
+      q: "All of these, but one is a problem of beaks.",
+      a: "nutrition",
+      opt: ["nutrition","canibalism","egg eating","fighting"]},
+    {
+      q: "NaOH used in dehorning is also known as all of the following, except _____.",
+      a: "Rustic Soda",
+      opt: ["Caustic Suda","Sodium Hydroxide","Rustic Soda","NaOH<sub>(conc.)</sub>"]},
+    {
+      q: "What is PH?",
+      a: "Power of Hydrogen",
+      opt: ["Power of Hydrogen","Hydroxide Ion Concentration","Hydopower","Power of Helium"]},
+    {
+      q: "What is ADT?",
+      a: "Adenocinetriphosphate",
+      opt: ["Adesobintriphosphate","Abedesiinetriphosphate","Adenocinetriphosphate","fingers"]},
+    {
+      q: "What hormone is responsible for the skin pigmentation of a farm animal?",
+      a: "melanin",
+      opt: ["melanin","renin","keratin","pepsin"]},
 ]

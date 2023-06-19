@@ -38,6 +38,7 @@
                 </div>
             </div>
         </div>
+        <div id="login-error"><i class="fa fa-exclamation-triangle"></i> Wrong Profile Code or Student ID</div>
     </section>
 
     <section id="logged-in">
@@ -78,19 +79,19 @@
             <div id="tests" class="page">
                 <div id="quizListing">
                     <div class="quizCourse">
-                        <img class="ass-img" src="img/ah.jpg">
-                        <div class="course-label">SS1 Animal Husbandry</div>
-                        <button class="button-label projectBtn"></button>
-                    </div>
-                    <div class="quizCourse">
                         <img class="ass-img" src="img/com.jpg">
                         <div class="course-label">JSS1 Computer Science</div>
                         <button class="button-label projectBtn" onclick="$.fn.quiz(JSS1comTst)"></button>
                     </div>
                     <div class="quizCourse">
-                        <img class="ass-img" src="img/phe.jpg">
-                        <div class="course-label">JSS3 PHE</div>
-                        <button class="button-label projectBtn"></button>
+                        <img class="ass-img" src="img/bsc.jpg">
+                        <div class="course-label">JSS2 Basic Science</div>
+                        <button class="button-label projectBtn" onclick="$.fn.quiz(JSS2bscTst)"></button>
+                    </div>
+                    <div class="quizCourse">
+                        <img class="ass-img" src="img/ah.jpg">
+                        <div class="course-label">SS1 Animal Husbandry</div>
+                        <button class="button-label projectBtn" onclick="$.fn.quiz(SS1ahTst)"></button>
                     </div>
                 </div>
                 <div class="card" id="quiz">

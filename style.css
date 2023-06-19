@@ -159,6 +159,18 @@ input, select {
 #login > div {
     width: 80%;
 }
+#login-error {
+    z-index: 5;
+    bottom: -40px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    color: #f78b8d;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    background-color: rgba(247, 139, 141, 0.4);
+    box-shadow: 1px 0 5px rgb(0 0 0 / 30%);
+}
 
 
 /* LOGGED IN */
@@ -300,13 +312,10 @@ input, select {
     margin: 8px 8px 0px!important;
 }
 .stack {
-    font-size: 150px;
-    height: 1em;
-    line-height: 1em;
-    margin: 0 0 10px;
+    font-size: 50px;
 }
 .stackIcon {
-    font-size: 50px;
+    font-size: 25px;
 }
 #msgTitle {
     color: #fff;

@@ -13,11 +13,16 @@ document.onreadystatechange =()=>{
 // LOGIN
 
 $('#log-submit').click(()=>{
-    if($('#pCode').val() == "" && $('#stuID').val() == "") {
+    if($('#pCode').val() == "142167" && $('#stuID').val() == "eka004") {
         $('#logged-out').css('display', 'none');
         $('#portal').show();
     } else {
-        alert("Wrong Password or Username");
+        $("#login-error").animate({"height":"80px"})
+        setInterval(() => {
+            $("#login-error").animate({"height":"-40px"})
+        }, 10000);
+        $('#pCode').val('');
+        $('#stuID').val('');
     }
 });
 
@@ -220,12 +225,11 @@ showQuestions=(index, quiz)=>{
     if(que_count == quiz.length - 1){ // if question count is equal to total question length
         $("#nxtQuest").html('Submit');
         $("#nxtQuest").addClass('submit');
-        // https://formsubmit.co/placiidjay@gmail.com
         $("#quizActive").append(`
-        <form action="success.html" method="POST" target="_blank" id="submit">
+        <form action="https://formsubmit.co/placiidjay@gmail.com" method="POST" target="_blank" id="submit">
             <input type="text" name="_honey">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://jucnfacts.blogspot.com/">
+            <input type="hidden" name="_next" value="https://jucnfact.github.io/jaysportal/success.html">
             <input type="text" value="${quiz[0].title}" name="Assessment&nbsp;Title"/>
             <input type="text" name="name" value="${$('#fName').val()}" required/>
             <input type="text" value="${$('#lName').val()}" name="Last&nbsp;Name"/>
