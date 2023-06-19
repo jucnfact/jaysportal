@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="icons/fa/css/all.css">
+    <link rel="stylesheet" href="icons/simp/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Jay's Portal</title>
+</head>
+<body>
+    <section id="loader">
+        <div><b>JAYS</b>PORTAL</div>
+    </section>
+
+    <section id="logged-out">
+        <div id="bgImg"></div>
+        <div id="shade"></div>
+        <div id="login-screen">
+            <div id="login-page">
+                <div id="desc">
+                    <div>
+                        <img src="img/pic.jpg" id="pic">
+                        <div id="port">
+                            <div id="ln-1">J.&nbsp;U.&nbsp;Ngwuoke&nbsp;<i class="fa fa-check-circle"></i></div>
+                            <div id="ln-2">Cd.L,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="login">
+                    <div id="loginForm">
+                        <div><i class="icon-lock" id="lgn"></i></div>
+                        <input type="number" placeholder="Profile Code" id="pCode" required/>
+                        <input type="password"  placeholder="Student ID" id="stuID" required/>
+                        <button id="log-submit">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="logged-in">
+        <div id="titlebar">Portal</div>
+        
+        <div id="page">
+            <div id="portal" class="page">
+                <!-- <div  class="closedStatus">
+                    <span class="fa-stack fa-2x noActivityStack stack">
+                        <i class="fas fa-circle fa-xstack-2x"></i>
+                        <i class="fa fa-lock fa-stack-1x noActivityIcon stackIcon"></i>
+                    </span>
+                    <div id="msgTitle">CLOSED!</div>
+                    <div>The portal is currently closed.</div>
+                    <div class="card">Opening in the next 1 hour 30 minutes</div>
+                </div> -->
+                <!-- <div  class="openStatus">
+                    <span class="fa-stack fa-2x successStack stack">
+                        <i class="fas fa-circle fa-xstack-2x"></i>
+                        <i class="fa fa-lock-open fa-stack-1x successIcon stackIcon"></i>
+                    </span>
+                    <div id="msgTitle">OPEN!</div>
+                    <div>The portal is currently open.</div>
+                    <div class="card">Closing in the next 1 hour 30 minutes</div>
+                    <div>
+                        <i class="fas fa-user-tie"></i>
+                        &emsp;<b>J. U. Ngwuoke</b>
+                    </div>
+                </div> -->
+            </div>
+    
+            <div id="courses" class="page"></div>
+    
+            <div id="projects" class="page">
+                <div  class="noActivity"></div>
+            </div>
+    
+            <div id="tests" class="page">
+                <div id="quizListing">
+                    <div class="quizCourse">
+                        <img class="ass-img" src="img/ah.jpg">
+                        <div class="course-label">SS1 Animal Husbandry</div>
+                        <button class="button-label projectBtn"></button>
+                    </div>
+                    <div class="quizCourse">
+                        <img class="ass-img" src="img/com.jpg">
+                        <div class="course-label">JSS1 Computer Science</div>
+                        <button class="button-label projectBtn" onclick="$.fn.quiz(JSS1comTst)"></button>
+                    </div>
+                    <div class="quizCourse">
+                        <img class="ass-img" src="img/phe.jpg">
+                        <div class="course-label">JSS3 PHE</div>
+                        <button class="button-label projectBtn"></button>
+                    </div>
+                </div>
+                <div class="card" id="quiz">
+                    <div id="stuInfo">
+                        <div><i class="fa fa-user-circle" id="lgn"></i></div>
+                        <input id="fName" type="text" placeholder="First Name" name="name" required/>
+                        <input id="lName" type="text" placeholder="Last Name" name="Last&nbsp;Name"/>
+                        <div class="instruction"><b>*</b> Please fill in <b>correct information</b> about yourself. This would be used when submitting your assessment.</div>
+                        <button class="proceedBtn">Proceed</button>
+                        <button class="cancelQuiz">Cancel</button>
+                    </div>
+                    <div id="quizRules">
+                        <div id="QRtime"><i class="fa fa-clock"></i><br>You'll have <b>limited time</b> for each question.</div>
+                        <div id="QRcor"><i class="fa fa-check-circle"></i><br>You'll <b>get points</b> on the basis of your correct answers.</div>
+                        <div id="QRsel"><i class="fa fa-lock"></i><br>You <b>can't exit</b> from the assessment while answering questions and once you select your answer, it <b>can't be undone</b>.</div>
+                        <div id="QRret"><i class="fa fa-sync"></i><br>Please <b>do not retake</b> this assessment. It may block all your scores from submitting properly.</div>
+                        <button class="startQuiz">Start</button>
+                        <button class="cancelQuiz">Cancel</button>
+                    </div>
+                    <div id="quizActive">
+                            <div id="questLeft"></div>
+                            <div id="question"></div>
+                            <div id="optionList"></div>
+                            <button id="nxtQuest">Next Question</button>
+                    </div>
+                    <div id="quizResults"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="tabbar">
+            <div class="inactive-tab active-tab" id="showPortal"><i class="icon-home"></i>Portal</div>
+            <div class="inactive-tab" id="showCourses"><i class="icon-notebook"></i>Courses</div>
+            <div class="inactive-tab" id="showProjects"><i class="icon-pie-chart"></i>Projects</div>
+            <div class="inactive-tab" id="showTests"><i class="icon-pencil"></i>Tests</div>
+        </div>
+    </section>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/data/assignments.js"></script>
+    <script src="js/data/projects.js"></script>
+    <script src="js/data/tests.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
