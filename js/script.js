@@ -8,7 +8,9 @@ document.onreadystatechange =()=>{
             $('#loader').fadeOut(2000)
         }, 2000);
     }
+    $('input').attr({'autocomplete': 'off', 'autocapitalized': 'false', 'spellcheck': 'false'})
 }
+
 
 // LOGIN
 
