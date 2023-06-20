@@ -267,13 +267,65 @@ let JSS3comTst = [
     {title: "JSS3 Computer Science Test",
       category: "Tests",
     
-      q: "Que?",
-      a: "iphone",
-      opt: ["stones","pebbles","iphone","fingers"]},
+      q: "A ____ is a person who forces on the ascpect of computer technology by way of promoting the responsible use of the tech.",
+      a: "computer professionals",
+      opt: ["computer users","computer professionals","computer populace","computer illiterates"]},
     {
-      q: "Que?",
-      a: "iphone",
-      opt: ["stones","pebbles","iphone","fingers"]},
+      q: "Which of the following professionals heads relevant computer or IT departments?",
+      a: "computer managers",
+      opt: ["computer managers","computer analysts","computer programmers","computer operators"]},
+    {
+      q: "Which of the following professionals handles computer troubleshooting?",
+      a: "computer engineers",
+      opt: ["computer engineers","computer educators","computer programmers","computer analysts"]},
+    {
+      q: "All of these, but one are qualities to be possessed by a good computer professional.",
+      a: "apathy for mathematics",
+      opt: ["solid problem solving capabilities","versitility","apathy for mathematics","excellent analytical skills"]},
+    {
+      q: "The below outlined are not computer professional bodies outside Nigeria, except _____.",
+      a: "ICS",
+      opt: ["ICS","CPRN","NIG","ITAN"]},
+    {
+      q: "The following are features of computer virus, except ____.",
+      a: "unprogramable",
+      opt: ["unsubmissive","unprogramable","active","infectious"]},
+    {
+      q: "The dangerous program, Melissa attacks ____ documents and ____ attachments.",
+      a: "word, email",
+      opt: ["word, email","audio, email","video, word","email, exe"]},
+    {
+      q: "____ is an example of a Trojan Horse.",
+      a: "Egbtr",
+      opt: ["armore","macro virus","egbtr","tunneling"]},
+    {
+      q: "Which of these viruses do not follow the normal theory of virus self-replication?",
+      a: "logic bomb",
+      opt: ["creeper","trojan horse","iphone","logic bomb"]},
+    {
+      q: "John downloads a game software from the internet on his SAMSUNG N100SP Notepad. After having spent a great time on GTA 5, he closes his system lid and plugs it in to charge for the next day's experience. While trying to cold boot the system on monday morning, he found out that his OS was unable to start. He quickly rushes to your office and you notice it was a malfuncion caused by computer virus infection. What type of virus do you think infected John's computer?",
+      a: "boot sector virus",
+      opt: ["worms","document attack virus","executable virus","boot sector virus"]},
+    {
+      q: "Doctor Norton is an anti-virus.",
+      a: "yes",
+      opt: ["yes","that's kind of correct","I don't really know","no"]},
+    {
+      q: "Graphs are also known as _____.",
+      a: "charts",
+      opt: ["scales","data","table","charts"]},
+    {
+      q: "____ are the lines in a chart representing the major or minor adjustment points on the scale(s).",
+      a: "grid lines",
+      opt: ["grid lines","chart lines","graph lines","coordinate lines"]},
+    {
+      q: "____ is used to specify a chart.",
+      a: "chart data",
+      opt: ["chart type","chart title","chart data","chart scales"]},
+    {
+      q: "The margin button used in setting page margins are located under what tab in MS Word 2007?",
+      a: "layout tab",
+      opt: ["view tab","layout tab","insert tab","none of the above"]},
 ]
 let JSS3ccaTst = [
     {title: "JSS1 Computer Science Test",
