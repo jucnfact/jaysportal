@@ -1,3 +1,4 @@
+// JSS2
 let JSS1comTst = [
     {title: "JSS1 Computer Science Test",
       category: "Tests",
@@ -62,18 +63,137 @@ let JSS1comTst = [
       a: "telephone calls",
       opt: ["telephone calls","telex messages","prints","fax"]},
 ]
+let JSS1pheTst = [
+    {title: "JSS1 PHE Test",
+      category: "Tests",
+    
+      q: "What is another name for soccer?",
+      a: "football",
+      opt: ["football","handball","basketball","baseball"]},
+    {
+      q: "What did the Brithish call soccer?",
+      a: "association football",
+      opt: ["accreditted baseball","association baseball","accreditted football","association football"]},
+    {
+      q: "Where did football originate from?",
+      a: "England",
+      opt: ["England","Finland","Iceland","USA"]},
+    {
+      q: "The English Football Association was the controlling football body in ____.",
+      a: "Britain",
+      opt: ["Nigeria","America","Britain","China"]},
+    {
+      q: "The English Football Association was formed in what year?",
+      a: "1863",
+      opt: ["1936","1963","1836","1863"]},
+    {
+      q: "The world football controlling body International Federation Of Football Association can be abbreviated as ____.",
+      a: "FIFA",
+      opt: ["IFFA","FIFA","FIDFA","IFOFA"]},
+    {
+      q: "FIFA was formed in what year?",
+      a: "1904",
+      opt: ["1904","1914","1924","1804"]},
+    {
+      q: "FIFA was formed at a meeting of representatives from how many countries?",
+      a: "7",
+      opt: ["9","8","7","6"]},
+    {
+      q: "Where did the first FIFA meeting take place?",
+      a: "Paris",
+      opt: ["Paris","New York","London","Moscow"]},
+    {
+      q: "Football was introduced into Nigeria by Brithish ____.",
+      a: "sailors and merchants",
+      opt: ["sailors and slaves","sailors and students","politicians and merchants","sailors and merchants"]},
+    {
+      q: "When was NFA, the soccer controlling body in Nigeria formed?",
+      a: "1933",
+      opt: ["1913","1933","1963","2003"]},
+    {
+      q: "Nigeria became an affilite of FIFA in what year?",
+      a: "1954",
+      opt: ["1954","1964","1974","1984"]},
+    {
+      q: "Football is played in a ____ pitch or field.",
+      a: "rectangular",
+      opt: ["triangular","trapezium","circular","rectangular"]},
+    {
+      q: "The team with the highest number of goals in football ____.",
+      a: "wins the game",
+      opt: ["looses the game","wins any game in the future","looses all future game","wins the game"]},
+    {
+      q: "Which of these statements is not true about the football field of play?",
+      a: "it has a maximum size of 1000m for national matches",
+      opt: ["it has goal lines","it is 40cm to 45cm wide","it has a maximum size of 1000m for national matches","it is a rectangular space"]},
+]
+
+
+// JSS2
 
 let JSS2comTst = [
     {title: "JSS2 Computer Science Test",
       category: "Tests",
     
-      q: "Que?",
-      a: "iphone",
-      opt: ["stones","pebbles","iphone","fingers"]},
+      q: "The Internet is most popularly shortened as ____.",
+      a: "net",
+      opt: ["iNet","Net","IT","INT"]},
     {
-      q: "Que?",
-      a: "iphone",
-      opt: ["stones","pebbles","iphone","fingers"]},
+      q: "The internet can best be explained as a ____.",
+      a: "network of computer networks",
+      opt: ["network of computers","network of computer networks","network of technological devices","all of the above"]},
+    {
+      q: "What does WWW stand for?",
+      a: "World Wide Web",
+      opt: ["World Wide Web","World Wide Wed","Word Wide Web","Word Wide Wed"]},
+    {
+      q: "A webpage is a ____ document.?",
+      a: "hypertext",
+      opt: ["hyperimage","text","hypertext","hype"]},
+    {
+      q: "Where are webpages stored?",
+      a: "on the web",
+      opt: ["on the internet","on your computer","on the web","in files"]},
+    {
+      q: "A URL is also known as ____.",
+      a: "web address",
+      opt: ["HTTP","web domain","IP address","web address"]},
+    {
+      q: "Web addresses cannot locate one of the following.",
+      a: "hardcopies",
+      opt: ["videos","hardcopies","images","texts"]},
+    {
+      q: "Websites are a set of related ____.",
+      a: "webpages",
+      opt: ["webpages","texts","videos","audios"]},
+    {
+      q: "All the following are geographical domains, except ____.",
+      a: ".com",
+      opt: [".com",".com.tk",".ng",".sa"]},
+    {
+      q: "One of the following is a domain used by network and technology organisations",
+      a: ".net",
+      opt: [".com",".net",".edu",".int"]},
+    {
+      q: "One of the following is a domain used by government agencies",
+      a: ".gov",
+      opt: [".gov",".edu",".int",".mil"]},
+    {
+      q: "Which of the following domains is best to be used by the Nigerian Army?",
+      a: ".mil.ng",
+      opt: [".ng",".mil.ng",".com.ng",".org.ng"]},
+    {
+      q: "Which of the following commands can be used in downloading files from the internet?",
+      a: "CTRL + S",
+      opt: ["CTRL + A","CTRL + N","CTRL + S","ALT + F4"]},
+    {
+      q: "What is the full meaning of HTTPS?",
+      a: "HyperText Transfer Protocol Secured",
+      opt: ["HTML Transfer Protocol Submitted","HyperText Transmission Protocol Secured","HyperText Transfer Protocol Secured","all of the following"]},
+    {
+      q: "What is the full name of your Computer Teacher?",
+      a: "Joshua Uchenna Ngwuoke",
+      opt: ["Joshua Uchenna Ngwuoke","Joshua Uchenna Ugwuoke","Joshua Uchechi Ngwuoke","Joshua Uchechi Ugwoke"]},
 ]
 let JSS2bscTst = [
     {title: "JSS2 Basic Science Test",
@@ -140,6 +260,9 @@ let JSS2bscTst = [
       opt: ["from latin name","from Nigerian name","from first letter of element","from two letters of element name"]},
 ]
 
+
+// JSS3
+
 let JSS3comTst = [
     {title: "JSS3 Computer Science Test",
       category: "Tests",
@@ -152,6 +275,74 @@ let JSS3comTst = [
       a: "iphone",
       opt: ["stones","pebbles","iphone","fingers"]},
 ]
+let JSS3ccaTst = [
+    {title: "JSS1 Computer Science Test",
+      category: "Tests",
+    
+      q: "____ is the ornamentation of fabric using needle work.",
+      a: "embriodery",
+      opt: ["embriodery","knitting","crocheting","all of the above"]},
+    {
+      q: "All the following are tools used in embroidery, except ____.",
+      a: "craftman's knife",
+      opt: ["Scissors","craftman's knife","fabric","embriodery hoop"]},
+    {
+      q: "____ is the process creating of fabric using needle work.",
+      a: "iphone",
+      opt: ["embriodery","knitting","crocheting","all of the above"]},
+    {
+      q: "____ is the process creating of fabric using crochet.",
+      a: "iphone",
+      opt: ["embriodery","knitting","crocheting","all of the above"]},
+    {
+      q: "Drama is a part of performing art that deals with ____.",
+      a: "sound and body movement",
+      opt: ["drumming and singing","drawing and painting","sound and body movement","sleeping and performing"]},
+    {
+      q: "____ is one's ability to discipline oneself.",
+      a: "self control",
+      opt: ["self control","tolerance","obedience","creativity"]},
+    {
+      q: "One of these facilities is not needed in batikwork.",
+      a: "brush",
+      opt: ["bowl","brush","hot water","spatula"]},
+    {
+      q: "Drawing in which a human being posses for an artist to draw is called ____ drawing.",
+      a: "life",
+      opt: ["still-life","posing","nature","life"]},
+    {
+      q: "Reading, movement, acting and expression are the activities involved in ____.",
+      a: "rehearsal",
+      opt: ["playing","rehearsal","singing","drama"]},
+    {
+      q: "Canvas is mostly used in ____.",
+      a: "painting",
+      opt: ["painting","textile","textile","ceramics"]},
+    {
+      q: "_____ is the pounding of old newspaper into pulp.",
+      a: "paper mache",
+      opt: ["modelling","paper mache","craft","art"]},
+    {
+      q: "_____ are small glass, plastic, metal, paper, wood or baked clay with holes made through them that allow cord to pass through.",
+      a: "iphone",
+      opt: ["bead","mosaic","collage","mache"]},
+    {
+      q: "Where did mosaic start?",
+      a: "mesopotamia",
+      opt: ["mesopotamia","mecedonia","makurdi","malidonia"]},
+    {
+      q: "_____ are the symbols or the basic unit of elements by which communication in design is easily understood.",
+      a: "motif",
+      opt: ["point","motif","line","shape"]},
+    {
+      q: "The following are materials needed for collage, except _____.",
+      a: "dye",
+      opt: ["blade","gum","dye","starch"]},
+]
+
+
+
+// SS1
 
 let SS1comTst = [
     {title: "SS1 Computer Science Test",
@@ -232,4 +423,68 @@ let SS1ahTst = [
       q: "What hormone is responsible for the skin pigmentation of a farm animal?",
       a: "melanin",
       opt: ["melanin","renin","keratin","pepsin"]},
+]
+let SS1phyTst = [
+    {title: "SS1 Physics Test",
+      category: "Tests",
+    
+      q: "Sir Isaac Newton's laws of motion are also known as ____.",
+      a: "New Instry Laws",
+      opt: ["Motion Laws","New Instry Laws","New Physics Laws","New Newton Laws"]},
+    {
+      q: "Which of these equations expresses the second postulation contained in the theory of motion by Newton?",
+      a: "S = ut + <sup>1</sup>/<sub>2</sub>at<sup>2</sup>",
+      opt: ["v = u + at","S = ut + <sup>1</sup>/<sub>2</sub>at<sup>2</sup>","v<sup>2</sup> = u<sup>2</sup> + 2as","S = u<sup>2</sup> + </sub>at<sup>2</sup>"]},
+    {
+      q: "The first instry law is also known as ____.",
+      a: "inertia",
+      opt: ["inertia","gravitation","exertia","none of the above"]},
+    {
+      q: "Which of the following is a type of distance?",
+      a: "displacement",
+      opt: ["displacement","gravity","velocity","acceleration"]},
+    {
+      q: "We measure how fast an object is moving in a particular direction in ____.",
+      a: "ms<sup>-1</sup>",
+      opt: ["m","ms<sup>-1</sup>","ms<sup>-2</sup>","kh<sup>-2</sup>"]},
+    {
+      q: "Time is all of the following, except ____.",
+      a: "ms<sup>-1</sup>",
+      opt: ["t","an interval","ms<sup>-1</sup>","a scalar"]},
+    {
+      q: "How far will a body move in 4s if uniformly accelerated from rest at the rate of 2ms<sup>-2</sup>?",
+      a: "8m",
+      opt: ["4m","8m","16m","32m"]},
+    {
+      q: "A horizontal force of 0.9N acts upon a body of mass (0.1kg). There is resistance of 0.15N opposing the force. Find the acceleration.",
+      a: "7.50ms<sup>-2</sup>",
+      opt: ["0.75ms<sup>-2</sup>","70.50ms<sup>-2</sup>","0.0075ms<sup>-2</sup>","7.50ms<sup>-2</sup>"]},
+    {
+      q: "What is the dimension for force?",
+      a: "MLT<sup>2</sup>T<sup>-3</sup>",
+      opt: ["MLT<sup>3</sup>T<sup>-2</sup>","ML<sup>2</sup>T<sup>-3</sup>","MT<sup>2</sup>T<sup>-3</sup>","MLT<sup>2</sup>T<sup>-3</sup>"]},
+    {
+      q: "____ is the mechanical manifestation of energy.",
+      a: "work",
+      opt: ["force","power","work","pressure"]},
+    {
+      q: "A body of mass 0.6kg is thrown vertically upward from the ground with a speed of 20ms<sup>-1</sup>. Calculate the potential energy at the maximum height reached. [WAEC 1998]",
+      a: "120J",
+      opt: ["1.2J","1,200J","12Nm","120J"]},
+    {
+      q: "A body moves along a circular path with uniform angular speed of 0.6rads<sup>-1</sup> and at a constant speed of 3.0ms<sup>-1</sup>. Calculate the acceleration of the body towards the centre of the circle. [WAEC 1995]",
+      a: "iphone",
+      opt: ["25.0ms<sup>-2</sup>","5.4ms<sup>-2</sup>","5.0ms<sup>-2</sup>","1.8ms<sup>-2</sup>"]},
+    {
+      q: "A ball is dropped from a height of 45m above the ground. Calculate the velocity of the ball just before it strikes the ground. (Neglect air resistance and take g as 10ms<sup>-2</sup>) [WAEC 1995]",
+      a: "30.0ms<sup>-1</sup>",
+      opt: ["21.1ms<sup>-1</sup>","30.0ms<sup>-1</sup>","300.0ms<sup>-1</sup>","900.0ms<sup>-1</sup>"]},
+    {
+      q: "A body of mass 4.2kg moving with a velocity 10ms<sup>-1</sup> due east, hits a stationary body of mass 2.8kg. If they stick together after collision and move with velocity v due east, calculate the value of v. [WAEC 1996]",
+      a: "6ms<sup>-1</sup>",
+      opt: ["3ms<sup>-1</sup>","6ms<sup>-1</sup>","7ms<sup>-1</sup>","15ms<sup>-1</sup>"]},
+    {
+      q: "A ball of mass 0.6kg is kicked vertically upward from the pitch by a player with a velocity of 20ms<sup>-1</sup>. Find the potential energy just before it hits the ground. [WAEC 1998]",
+      a: "120J",
+      opt: ["120J","1.2Nm","12Nm","1,200Nm"]},
 ]

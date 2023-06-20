@@ -15,7 +15,7 @@ document.onreadystatechange =()=>{
 // LOGIN
 
 $('#log-submit').click(()=>{
-    if($('#pCode').val() == "142167" && $('#stuID').val() == "eka004") {
+    if($('#pCode').val() == "142167" && $('#stuID').val() == "ekastu") {
         $('#logged-out').css('display', 'none');
         $('#portal').show();
     } else {
