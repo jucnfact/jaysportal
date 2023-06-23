@@ -1,4 +1,4 @@
-// JSS2
+// JSS1
 let JSS1comTst = [
     {title: "JSS1 Computer Science Test",
       category: "Tests",
@@ -147,7 +147,7 @@ let JSS2comTst = [
       a: "World Wide Web",
       opt: ["World Wide Web","World Wide Wed","Word Wide Web","Word Wide Wed"]},
     {
-      q: "A webpage is a ____ document.?",
+      q: "A webpage is a ____ document.",
       a: "hypertext",
       opt: ["hyperimage","text","hypertext","hype"]},
     {
@@ -328,7 +328,7 @@ let JSS3comTst = [
       opt: ["view tab","layout tab","insert tab","none of the above"]},
 ]
 let JSS3ccaTst = [
-    {title: "JSS1 Computer Science Test",
+    {title: "JSS3 CCA Test",
       category: "Tests",
     
       q: "____ is the ornamentation of fabric using needle work.",
@@ -400,17 +400,65 @@ let SS1comTst = [
     {title: "SS1 Computer Science Test",
       category: "Tests",
     
-      q: "Que?",
-      a: "iphone",
-      opt: ["stones","pebbles","iphone","fingers"]},
+      q: "A typical Beginner's All-purpose Synmbolic Instructional Code algorithim ends with what command?",
+      a: "END",
+      opt: ["STOP","CLS","PRINT","END"]},
     {
-      q: "Que?",
-      a: "iphone",
-      opt: ["stones","pebbles","iphone","fingers"]},
-      {
-        q: "What is the full name of your Computer Teacher?",
-        a: "Joshua Uchenna Ngwuoke",
-        opt: ["Joshua Uchenna Ngwuoke","Joshua Uchenna Ugwuoke","Joshua Uchechi Ngwuoke","Joshua Uchechi Ugwoke"]},
+      q: "₦90,000 is the total sum of money budgetted to be paid to 3 employees. Write a BASIC program to display on the screen, the amount agreed to be paid to each worker. What logic did your program use?",
+      a: "90,000 / 3",
+      opt: ["3 / 90,000","90,000 / 3","90,000 ^ 3","90,000 * 3"]},
+    {
+      q: "The BASIC command CLS stands for  what?",
+      a: "Clear Screen",
+      opt: ["Clear String","Clear Storage","Clear Screen","Clear Scene"]},
+    {
+      q: "Information and Communication Technology is required for one of these.",
+      a: "information processing",
+      opt: ["information processing","sync processing","tech processing","big data science"]},
+    {
+      q: "Outlined hereafter, are tools for transmitting information, with the exception of one.",
+      a: "Intlex",
+      opt: ["SMS","fax","radio","Intlex"]},
+    {
+      q: "____ is the conveyance of message signals between two or multiple parties.",
+      a: "communication",
+      opt: ["technology","communication","automation","computation"]},
+    {
+      q: "ICT utilizes ____ number of communication strategies.",
+      a: "2",
+      opt: ["8","4","2","6"]},
+    {
+      q: "Which of these features are not of online chats?",
+      a: "none of the above",
+      opt: ["text messages","voice notes","video calls","none of the above"]},
+    {
+      q: "The following are not types of ICT, except one.",
+      a: "data network",
+      opt: ["data network","video conferencing","multiplex system","syncronous communication"]},
+    {
+      q: "In a multiplex system, ____ is required between the numerous transmitters and receivers.",
+      a: "transmission medium",
+      opt: ["point-to-point medium","transmitter medium","receptor medium","transmission medium"]},
+    {
+      q: "Which of these is not a component of information systems?",
+      a: "dataria",
+      opt: ["computer hardware","database","dataria","computer software"]},
+    {
+      q: "The word fragment &quot;tele&quot; from teleconferencing means ____.",
+      a: "distance",
+      opt: ["discussion","distance","sound","communication"]},
+    {
+      q: "What type of data network is the internet?",
+      a: "WAN",
+      opt: ["LAN","MAN","WAN","WLAN"]},
+    {
+      q: "____ is not synonymous to MOBILE phone.",
+      a: "home phone",
+      opt: ["cell phone","wireless phone","home phone","smart phone"]},
+    {
+      q: "What is the full name of your Computer Teacher?",
+      a: "Joshua Uchenna Ngwuoke",
+      opt: ["Joshua Uchenna Ngwuoke","Joshua Uchenna Ugwuoke","Joshua Uchechi Ngwuoke","Joshua Uchechi Ugwoke"]},
 ]
 let SS1ahTst = [
     {title: "SS1 Animal Husbandry Test",
