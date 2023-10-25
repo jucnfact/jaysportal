@@ -1,17 +1,4 @@
-@font-face {
-    font-family: 'ComicSans';
-    src: url(fonts/LDFComicSans.ttf);
-}
-@font-face {
-    font-family: 'ComicSans';
-    src: url(/fonts/LDFComicSansBold.ttf);
-    font-weight: bold;
-}
-@font-face {
-    font-family: 'ComicSans';
-    src: url(/fonts/LDFComicSansLight.ttf);
-    font-weight: lighter;
-}
+@import url('https://fonts.cdnfonts.com/css/comic-neue');
 html, body {
     font-family: Roboto;
     background-color: #22272b;
@@ -349,7 +336,7 @@ logged-out {
     right: 0;
     width: auto;
     border-radius: 25px 0 0 25px;
-    padding: 11px;
+    padding: 10px;
     margin: 0;
 }
 #cancelNote::before {
@@ -476,7 +463,7 @@ noActivity, .successMsg, .closedStatus, .openStatus {
 }
 #board {
     background-color: #000;
-    font-family: Comic Sans MS;
+    font-family: 'Comic Neue', sans-serif;              
     color: white;
     height: calc(100% - 8px);
     overflow-y: scroll;
