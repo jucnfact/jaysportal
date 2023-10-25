@@ -23,6 +23,8 @@ $('#log-submit').click(()=>{
     if($('#pCode').val() == "142167" && $('#stuID').val() == "ekastu") {
         $('logged-out').css('display', 'none');
         $('#portal').show();
+        let success = document.querySelector("#success");
+        success.play();
     } else {
         $("#login-error").animate({"height":"80px"})
         setInterval(() => {
@@ -30,6 +32,8 @@ $('#log-submit').click(()=>{
         }, 10000);
         $('#pCode').val('');
         $('#stuID').val('');
+        let error = document.querySelector("#error");
+        error.play();
     }
 });
 
@@ -331,12 +335,17 @@ $.fn.copy=(note)=>{
     });
     typed.typeString("" + note[0].note + "").start();
     $('#cancelNote').show();
+    let hello = document.querySelector("#hello");
+    hello.play();
     $('#cancelNote').click(()=>{
         $('#cancelNote').hide();
         $('#note').hide();
         $('#courseListing').show();
-        $("#titlebar").html(note[0].category);
         $('#courses br').show();
+        hello.pause();
+    })
+    $('#board').click(()=>{
+        $("#titlebar").html(note[0].category);
     })
 }
 
