@@ -1,22 +1,27 @@
-// SPLASH SCREEN
+////////////////////////////////
+// SPLASH SCREEN //
+////////////////////////////////
 
 document.onreadystatechange =()=>{
     if (document.readyState !== "complete") {
-        $('#loader').css('visibility', 'visible')
+        $('loader').css('visibility', 'visible');
     } else {
         setTimeout(() => {
-            $('#loader').fadeOut(2000)
+            $('loader').fadeOut(2000)
         }, 2000);
     }
-    $('input').attr({'autocomplete': 'off', 'autocapitalized': 'false', 'spellcheck': 'false'})
+    $('input').attr({'autocomplete': 'off', 'autocapitalized': 'false', 'spellcheck': 'false'});
 }
 
 
-// LOGIN
+
+/////////////////////////////
+// LOGIN SYSTEM //
+/////////////////////////////
 
 $('#log-submit').click(()=>{
     if($('#pCode').val() == "142167" && $('#stuID').val() == "ekastu") {
-        $('#logged-out').css('display', 'none');
+        $('logged-out').css('display', 'none');
         $('#portal').show();
     } else {
         $("#login-error").animate({"height":"80px"})
@@ -28,13 +33,28 @@ $('#log-submit').click(()=>{
     }
 });
 
-// PORTAL UPDATE ENGINE
 
-updatePortal=()=>{
+
+////////////////////////////////////////////
+// PORTAL UPDATE ENGINE //
+////////////////////////////////////////////
+
+// NOTE: Running the wrong Portal Update Engine or two engines at a time will result in both functional and display irregularities.
+
+/**********************************
+                        ENGINE 1
+            Features:
+* Allows tests
+* Leaves portal open from 5pm to 10pm
+* Closes portal from 10pm to 5pm
+* Suitable for test period
+**********************************/
+
+/* updatePortal=()=>{
     let now = new Date(),
     min = now.getMinutes(),
     hr = now.getHours() + 1
-    // SMART NATURAL TIME DISPLAY
+    // SMART (NATURAL) TIME DISPLAY
     smartTime=()=>{
         if (hrLeft == 1) { // singular hr if = 1
             hrLeft = `${hrLeft} hour`;
@@ -80,7 +100,7 @@ updatePortal=()=>{
             <div class="card instructor"><div id="instCard">
                 <div><img src="img/pic.jpg"></div>
                 <div id="instName">J. U. Ngwuoke
-                    <div id="ln-2">Cd.L,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
+                    <div id="ln-2">SSCE,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
                 </div>
                 <i class="fa fa-wifi-3" id="live"></i>
             </div></div>
@@ -114,10 +134,7 @@ updatePortal=()=>{
         smartTime();
         $('#portal').html(`
         <div  class="closedStatus">
-            <span class="fa-stack fa-2x noActivityStack stack">
-                <i class="fas fa-circle fa-xstack-2x"></i>
-                <i class="fa fa-lock fa-stack-1x noActivityIcon stackIcon"></i>
-            </span>
+        <i class="fa fa-lock noActivityIcon stackIcon"></i>
             <div id="msgTitle">CLOSED!</div>
             <div>The portal is currently closed.</div>
             <div class="card smartTime">Opening in the next <b>${hrLeft} ${minLeft}</b></div>
@@ -128,19 +145,74 @@ updatePortal=()=>{
         $('#tests').html('')
     }
 }
+setInterval(updatePortal, 1000) */
+
+
+/**********************************
+                        ENGINE 2
+            Features:
+* Allows copying note
+* Leaves portal open
+* Never closes portal
+* Suitable for non-test period
+**********************************/
+
+updatePortal=()=>{
+    // TAB AND PAGE NAVIGATION FUNCTION
+    activeTab=(pg_title, tab_numb)=>{
+        $('#titlebar').html(pg_title);
+        $('#page div.page:not(:nth-child(' + tab_numb + '))').hide();
+        $('#page div.page:nth-child(' + tab_numb + ')').show();
+        $('#tabbar div:not(:nth-child(' + tab_numb + '))').removeClass('active-tab');
+        $('#tabbar div:nth-child(' + tab_numb + ')').addClass('active-tab');
+    }
+    // TIME
+    $('#portal').html(`
+    <div  class="openStatus">
+    <i class="fa fa-lock-open successIcon stackIcon"></i>
+        <div id="msgTitle">OPEN!</div>
+        <div>The portal is currently open.</div>
+        <div class="card smartTime">Now always <b>open</b></div>
+        <div class="card instructor"><div id="instCard">
+            <div><img src="img/pic.jpg"></div>
+            <div id="instName">J. U. Ngwuoke
+            <div id="ln-2">SSCE,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
+            </div>
+            <i class="fa fa-wifi-3" id="live"></i>
+        </div></div>
+    </div>`)
+    // WHEN TAB IS CLICKED ...
+    $("#showPortal").click(()=>{
+        activeTab('Portal', 1);
+    })
+    $("#showCourses").click(()=>{
+        activeTab('Courses', 2);
+    })
+    $("#showProjects").click(()=>{
+        activeTab('Projects', 3);
+    })
+    $("#showTests").click(()=>{
+        activeTab('Tests', 4);
+    })
+}
 setInterval(updatePortal, 1000)
 
-// PAGE BOTTOM MARGIN FIX
 
+
+//////////////////////////////////
+// CONTENT ENGINE //
+//////////////////////////////////
+
+// PAGE BOTTOM MARGIN FIX
 $(".page").append("<br><br><br><br>");
-$(".noActivity").html(`
-<span class="fa-stack fa-2x noActivityStack stack">
-    <i class="fas fa-circle fa-xstack-2x"></i>
-    <i class="fa fa-bell-slash fa-stack-1x noActivityIcon stackIcon"></i>
-</span>
+// NO ACTIVITY PAGE
+$("noActivity").html(`
+<i class="fa fa-bell-slash noActivityIcon stackIcon"></i>
 <div id="msgTitle">No Activity!</div>
 <div>There are no activities at this time.</div>`);
+// COURSES PAGE
 $("#courses").prepend(`
+<div id="courseListing">
 <div class="course">
     <img class="intro-img" src="img/com.jpg">
     <div class="course-label">Computer Science</div>
@@ -154,37 +226,125 @@ $("#courses").prepend(`
     <div id="classes">JSS1 to JSS3</div>
     <div id="students">30+ Students</div>
     <div id="description">Basic Science is the foundation of scientific knowledge. It is comprised of the fundamental principles of natural sciences, such as physics, chemistry and biology.</div>
+    <JSS3bsc></JSS3bsc>
 </div>
-<div class="course CCA">
-    <img class="intro-img" src="img/cca.jpg">
-    <div class="course-label">CCA</div>
-    <div id="classes">JSS1 to JSS3</div>
-    <div id="students">30+ Students</div>
-    <div id="description">Cultural & Creative Arts is an outlet of practical, imaginative and creative expression that is usually influenced by culture, and in turn, helps to improve the culture.</div>
-</div>
-<div class="course PHE">
-    <img class="intro-img" src="img/phe.jpg">
-    <div class="course-label">PHE</div>
-    <div id="classes">JSS1 to JSS3</div>
-    <div id="students">30+ Students</div>
-    <div id="description">Physical & Health Education is the acquisition of skills and knowledge necessary to help the development of the body, mind and spirit through carefully selected physical activities in order to promote health and wellness.</div>
-</div>
-<div class="course PHY">
+<div class="course">
     <img class="intro-img" src="img/phy.jpg">
     <div class="course-label">Physics</div>
     <div id="classes">SS1 & SS2</div>
     <div id="students">10+ Students</div>
     <div id="description">Physics is the branch of science concerned with the study of properties and interactions of space, time, matter and energy.</div>
 </div>
-<div class="course AH">
+<div class="course">
     <img class="intro-img" src="img/ah.jpg">
     <div class="course-label">Animal Husbandry</div>
     <div id="classes">SS1 & SS2</div>
     <div id="students">10+ Students</div>
     <div id="description">Animal Husbandry is the management and care of farm animals by humans for profit, in which genetic qualities and behaviour, considered to be advantegeous to humans, are further developed.</div>
-</div>`);
+</div>
+</div>
+<div id="note">
+    <div class="card" id="board"></div>
+    <img id="chalk" src="img/chalk.png">
+    <button id="cancelNote"></button>
+</div>
+`);
+// TESTS PAGE
+$.fn.loadTest=(quiz)=>{
+    let q = quiz[0].code, t =quiz[0].title
+    $(q).html(`
+    <div class="quizCourse">
+        <div class="ass-img"></div>
+        <div class="ass-box">
+            <div class="title-label">${t}</div>
+            <div class="title-icons">
+                <div id="questions">15 Questions</div>
+                <div id="time">Limited Time</div>
+                <div id="trials">1 Trial</div>
+            </div>
+            <button class="enterBtn" onclick="$.fn.quiz(${q})"></button>
+        </div>
+    </div>`);
+    img=(tag, img)=>{
+        $('' + tag + ' .ass-img').css('background-image', 'url(img/' + img + '.jpg)');
+    }
+    tst_imgs=(file)=>{
+        for (let i = 0; i < tests.length; i++) {
+            img(tests[i], file);
+        }
+    }
+    crs_imgs=(img)=>{
+        let courses = ['com', 'bsc', 'ah', 'phy']
+        for (let i = 0; i < courses.length; i++) {
+            if (q.indexOf(courses[i])) {
+                tst_imgs(img)
+            }
+        }
+    }
+    let tests = ['JSS1comTst', 'JSS2comTst', 'JSS3comTst', 'SS1comTst', 'SS2comTst'];
+    crs_imgs('com');
+    tests = ['JSS1bscTst', 'JSS2bscTst', 'JSS3bscTst'];
+    crs_imgs('bsc');
+    tests = ['SS1ahTst', 'SS2ahTst', 'SS3ahTst'];
+    crs_imgs('ah');
+    tests = ['SS1phyTst', 'SS2phyTst', 'SS3phyTst'];
+    crs_imgs('phy');
+}
+$("#showTests").click(()=>{
+    let tests = [JSS1comTst, JSS1bscTst, JSS2comTst, JSS2bscTst, JSS3comTst, JSS3bscTst, SS1comTst, SS1ahTst, SS1phyTst, SS2comTst, SS2ahTst, SS2phyTst, SS3comTst, SS3ahTst, SS3phyTst]
+    for (let i = 0; i < tests.length; i++) {
+        $.fn.loadTest(tests[i]);
+    }
+})
+// NOTE CARD & PAGE
+$.fn.loadNote=(note)=>{
+    let n = note[0].code, t =note[0].title;
+    $(n).html(`
+    <div class="noteCrd">
+        <div class="ass-img"><i class="icon-notebook"></i></div>
+        <div class="ass-box">
+            <div class="title-label">${t}</div>
+            <button class="copyBtn" onclick="$.fn.copy(${n})"></button>
+        </div>
+    </div>`);
+}
+$("#showCourses").click(()=>{
+    let notes = [JSS1com, JSS1bsc, JSS2com, JSS2bsc, JSS3com, JSS3bsc, SS1com, SS1ah, SS1phy, SS2com, SS2ah, SS2phy, SS3com, SS3ah, SS3phy]
+    for (let i = 0; i < notes.length; i++) {
+        $.fn.loadNote(notes[i]);
+    }
+})
 
-// QUIZ FUNCTION SECTION
+
+
+//////////////////////////
+// NOTE ENGINE //
+//////////////////////////
+
+$.fn.copy=(note)=>{
+    $('#courseListing').hide();
+    $('#courses br').hide();
+    $('#note').show();
+    $('#titlebar').html(note[0].title);
+    const typed = new Typewriter('#board', {
+        loop: false,
+    });
+    typed.typeString("" + note[0].note + "").start();
+    $('#cancelNote').show();
+    $('#cancelNote').click(()=>{
+        $('#cancelNote').hide();
+        $('#note').hide();
+        $('#courseListing').show();
+        $("#titlebar").html(note[0].category);
+        $('#courses br').show();
+    })
+}
+
+
+
+//////////////////////////
+// QUIZ ENGINE //
+//////////////////////////
 
 let que_count = 0;
 let que_numb = 1;
@@ -200,12 +360,12 @@ showQuestions=(index, quiz)=>{
         
     // if Next Que button clicked
     next_btn.onclick = ()=>{
-        if(que_count < quiz.length - 1){ //if question count is less than total question length
+        if (que_count < quiz.length - 1) { //if question count is less than total question length
             que_count++; //increment the que_count value
             que_numb++; //increment the que_numb value
             showQuestions(que_count, quiz); //calling showQestions function
             queCounter(que_numb); //passing que_numb value to queCounter
-        }else{
+        } else {
             showResult(); //calling showResult function
             exitQuiz=()=>{
                 que_count = 0;
@@ -365,4 +525,3 @@ $.fn.quiz=(quiz)=>{
         $("#titlebar").html(quiz[0].category);
     })
 }
-

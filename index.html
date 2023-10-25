@@ -11,11 +11,11 @@
     <title>Jay's Portal</title>
 </head>
 <body>
-    <section id="loader">
+    <loader>
         <div><b>JAYS</b>PORTAL</div>
-    </section>
+    </loader>
 
-    <section id="logged-out">
+    <logged-out>
         <div id="bgImg"></div>
         <div id="shade"></div>
         <div id="login-screen">
@@ -25,58 +25,36 @@
                         <img src="img/pic.jpg" id="pic">
                         <div id="port">
                             <div id="ln-1">J.&nbsp;U.&nbsp;Ngwuoke&nbsp;<i class="fa fa-check-circle"></i></div>
-                            <div id="ln-2">Cd.L,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
+                            <div id="ln-2">SSCE,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
                         </div>
                     </div>
                 </div>
                 <div id="login">
                     <div id="loginForm">
                         <div><i class="icon-lock" id="lgn"></i></div>
-                        <input type="number" placeholder="Profile Code" id="pCode" required/>
-                        <input type="text"  placeholder="Student ID" id="stuID" required/>
+                        <input type="number" placeholder="Profile Code" id="pCode" value="" required/>
+                        <input type="text"  placeholder="Student ID" id="stuID" value="" required/>
                         <button id="log-submit">Login</button>
                     </div>
                 </div>
             </div>
         </div>
         <div id="login-error"><i class="fa fa-exclamation-triangle"></i> Wrong Profile Code or Student ID</div>
-    </section>
+    </logged-out>
 
-    <section id="logged-in">
+    <logged-in>
         <div id="titlebar">Portal</div>
         
         <div id="page">
             <div id="portal" class="page"></div>
-    
             <div id="courses" class="page"></div>
-    
             <div id="projects" class="page">
-                <div  class="noActivity"></div>
+                <noActivity></noActivity>
             </div>
-    
             <div id="tests" class="page">
                 <div id="quizListing">
-                    <div class="quizCourse">
-                        <img class="ass-img" src="img/com.jpg">
-                        <div class="course-label">JSS1 Computer Science</div>
-                        <button class="button-label projectBtn" onclick="$.fn.quiz(JSS1comTst)"></button>
-                    </div>
-                    <div class="quizCourse">
-                        <img class="ass-img" src="img/com.jpg">
-                        <div class="course-label">JSS2 Computer Science</div>
-                        <button class="button-label projectBtn" onclick="$.fn.quiz(JSS2comTst)"></button>
-                    </div>
-                    <div class="quizCourse">
-                        <img class="ass-img" src="img/com.jpg">
-                        <div class="course-label">JSS3 Computer Science</div>
-                        <button class="button-label projectBtn" onclick="$.fn.quiz(JSS3comTst)"></button>
-                    </div>
-                    <div class="quizCourse">
-                        <img class="ass-img" src="img/com.jpg">
-                        <div class="course-label">SS1 Computer Science</div>
-                        <button class="button-label projectBtn" onclick="$.fn.quiz(SS1comTst)"></button>
-                    </div>
-                </div>
+                    <noActivity></noActivity>
+                </div>     
                 <div class="card" id="quiz">
                     <div id="stuInfo">
                         <div><i class="fa fa-user-circle" id="lgn"></i></div>
@@ -104,19 +82,20 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="tabbar">
             <div class="inactive-tab active-tab" id="showPortal"><i class="icon-home"></i>Portal</div>
             <div class="inactive-tab" id="showCourses"><i class="icon-notebook"></i>Courses</div>
             <div class="inactive-tab" id="showProjects"><i class="icon-pie-chart"></i>Projects</div>
             <div class="inactive-tab" id="showTests"><i class="icon-pencil"></i>Tests</div>
         </div>
-    </section>
+    </logged-in>
     
     <script src="js/jquery.js"></script>
-    <script src="js/data/assignments.js"></script>
+    <script src="js/data/courses.js"></script>
     <script src="js/data/projects.js"></script>
     <script src="js/data/tests.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/tpw.js"></script>
 </body>
 </html>

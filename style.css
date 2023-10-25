@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'ComicSans';
+    src: url(fonts/LDFComicSans.ttf);
+}
+@font-face {
+    font-family: 'ComicSans';
+    src: url(/fonts/LDFComicSansBold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'ComicSans';
+    src: url(/fonts/LDFComicSansLight.ttf);
+    font-weight: lighter;
+}
 html, body {
     font-family: Roboto;
     background-color: #22272b;
@@ -50,27 +64,27 @@ input, select {
 
 /* LOGGED OUT */
 
-#loader, #logged-out, #shade {
+loader, logged-out, #shade {
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
 }
-#loader {
+loader {
     z-index: 5;
     background-color: #111b21;
 }
-#loader div {
+loader div {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-#loader b {
+loader b {
     font-weight: 900;
 }
-#logged-out {
+logged-out {
     color: #fff;
     z-index: 4;
 }
@@ -242,48 +256,107 @@ input, select {
     padding: 16px;
     word-wrap: break-word;
 }
-.course, .quizCourse {
-    color: #fff;
+.course {
     position: relative;
+    padding: 0 0 8px;
+}
+.course, .quizCourse, .noteCrd {
+    color: #fff;
     text-align: center;
     border-radius: 22px;
     margin: 8px 8px 16px;
 }
-.course {
-    background-color: #111b21!important;
+.course, .quizCourse {
+    background-color: #111b21;
 }
-.quizCourse {
-    background-color: transparent;
+.noteCrd {
+    background: #202c33;
+}
+.quizCourse, .noteCrd {
+    display: flex;
+    flex-direction: row;
+}
+.quizCourse > div, .noteCrd > div {
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+.ass-box {
+    width: 65%;
 }
 .intro-img {
     width: 100%;
-    text-align: center;
     border-radius: 22px 22px 0 0;
 }
 .ass-img {
-    width: 100%;
-    text-align: center;
-    border-radius: 22px;
+    width: 35%;
+    height: auto;
+    display: block;
+    border-radius: 22px 0 0 22px;
+    padding: 20px!important;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: rgba(95, 161, 199, 0.1);
+}
+.ass-img i {
+    color: #8696a0;
+    font-size: 40px;
 }
 .course-label {
-    padding: 2px 4px;
+    padding: 3px 6px 3px;
     text-align: center;
     position: absolute;
-    border-radius: 4px;
+    border-radius: 15px;
     box-shadow: 0 1px 2px rgb(0 0 0 / 12%);
     background-color: #111b21;
     top: 8px;
     left: 8px;
 }
-.button-label {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
+.title-label  {
+    margin: 8px 0 0;
 }
-.projectBtn::before {
+.title-icons {
+    font-weight: normal;
+    padding: 8px 0;
+    color: #8696a0;
+}
+#questions::before {
+    content:"\e4ef\a";
+}
+#time::before {
+    content:"\f017\a";
+}
+#trials::before {
+    content:"\f2f1\a";
+}
+.enterBtn::before {
     content: 'Enter';
 }
-#classes::before, #students::before, .no-activity::before, .activeOpt::before, #closedStatus::before, .smartTime::before {
+.copyBtn::before {
+    content: 'Copy';
+}
+.enterBtn, .copyBtn {
+    margin: 8px;
+}
+#cancelNote {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    width: auto;
+    border-radius: 25px 0 0 25px;
+    padding: 11px;
+    margin: 0;
+}
+#cancelNote::before {
+    content:"\f00d";
+    color: #fff!important;
+}
+#cancelNote::before, #classes::before, #students::before, .no-activity::before, .activeOpt::before, #closedStatus::before, .smartTime::before, #time::before, #questions::before, #trials::before {
     font-family: "Font Awesome 6 Free";
     font-weight: bold;
     color: #8696a0;
@@ -308,14 +381,13 @@ input, select {
     font-size: 11px;
     color: #8696a0;
 }
-.course:last-child, .quizCourse:last-child {
+.course:last-child {
     margin: 8px 8px 0px!important;
-}
-.stack {
-    font-size: 80px;
 }
 .stackIcon {
     font-size: 40px;
+    padding: 40px;
+    border-radius: 50%;
 }
 #msgTitle {
     color: #fff;
@@ -326,30 +398,21 @@ input, select {
 #sBtn {
     margin-top: 15px;
 }
-.successStack {
-    color: rgba(0, 168, 132, 0.4);
-}
 .successIcon {
     color: #00a884;
+    background: rgba(0, 168, 132, 0.4);
 }
-.noActivityStack {
-    color: rgba(247, 139, 141, 0.4);
-}
-.closedIcon {
-    background-color: rgba(247, 139, 141, 0.4);
-    padding: 50px;
-    border-radius: 50%;
-}
-.noActivityIcon, .closedIcon {
+.noActivityIcon {
     color: #f78b8d;
+    background: rgba(247, 139, 141, 0.4);
 }
-.noActivity, .closedStatus, .openStatus {
-    top: 46%;
+noActivity, .closedStatus {
+    top: calc(50% - 23px);
 }
-.successMsg{
-    top: 54%;
+.successMsg, .openStatus{
+    top: 50%;
 }
-.noActivity, .successMsg, .closedStatus, .openStatus {
+noActivity, .successMsg, .closedStatus, .openStatus {
     width: 100%;
     text-align: center;
     position: absolute;
@@ -392,10 +455,10 @@ input, select {
     font-size: 30px;
     color: #ff8c00;
     text-shadow: #ff8c00 0px 3px 30px;
-    animation: glitch 5s ease-in-out;
+    animation: live 5s ease-in-out;
     opacity: 0;
 }
-@keyframes glitch {
+@keyframes live {
     15% {
         opacity: 1;
     }
@@ -404,6 +467,60 @@ input, select {
     }
 }
 
+/* Note */
+
+#note {
+    display: none;
+    overflow-y: hidden;
+    height: calc(100% - 79px);
+}
+#board {
+    background-color: #000;
+    font-family: Comic Sans MS;
+    color: white;
+    height: calc(100% - 8px);
+    overflow-y: scroll;
+    border-radius: 22px 22px 0 0;
+    padding-bottom: 100px;
+}
+#chalk {
+    position: absolute;
+    bottom: 79px;
+    width: calc(100% - 16px);
+    right: 8px;
+}
+.Typewriter__cursor {
+    display: none;
+}
+#board h2, #board h3, #board h4 {
+    text-decoration: underline;
+}
+#board h2::after, #board h3::after, #board h4::after {
+    content: ":";
+    text-decoration: none!important;
+}
+#board li {
+    margin: 8px 0;
+}
+#board ol  ol {
+    list-style-type: lower-latin;
+}
+#board ol  ol ol {
+    list-style-type: lower-roman;
+}
+#board ol  ol ol ol {
+    list-style-type: upper-latin;
+}
+#board ol  ol ol ol ol {
+    list-style-type: upper-roman;
+}
+#board img {
+    overflow-x: auto;
+    display: block;
+    width: 100%;
+}
+
+/* Quiz*/
 
 #quiz {
     display: none;
@@ -589,6 +706,11 @@ input, select {
 }
 @media only screen and (min-width: 600px) {
     /* For tablets: */
+    .page {
+        width: 70%;
+        right: 15%;
+        left: 15%;
+    }
 }
 @media only screen and (min-width: 768px) {
     /* For desktop: */

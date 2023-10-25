@@ -1,7 +1,9 @@
-// JSS1
+﻿// JSS1
+
 let JSS1comTst = [
     {title: "JSS1 Computer Science Test",
       category: "Tests",
+      code: "JSS1comTst",
     
       q: "Beating drums involves the use of what?",
       a: "drums",
@@ -63,9 +65,10 @@ let JSS1comTst = [
       a: "telephone calls",
       opt: ["telephone calls","telex messages","prints","fax"]},
 ]
-let JSS1pheTst = [
-    {title: "JSS1 PHE Test",
+let JSS1bscTst = [
+    {title: "JSS1 Basic Science Test",
       category: "Tests",
+      code: "JSS1bscTst",
     
       q: "What is another name for soccer?",
       a: "football",
@@ -134,6 +137,7 @@ let JSS1pheTst = [
 let JSS2comTst = [
     {title: "JSS2 Computer Science Test",
       category: "Tests",
+      code: "JSS2comTst",
     
       q: "The Internet is most popularly shortened as ____.",
       a: "net",
@@ -198,6 +202,7 @@ let JSS2comTst = [
 let JSS2bscTst = [
     {title: "JSS2 Basic Science Test",
       category: "Tests",
+      code: "JSS2bscTst",
     
       q: "What is the valency of Aluminium?",
       a: "3",
@@ -266,6 +271,7 @@ let JSS2bscTst = [
 let JSS3comTst = [
     {title: "JSS3 Computer Science Test",
       category: "Tests",
+      code: "JSS3comTst",
     
       q: "A ____ is a person who forces on the ascpect of computer technology by way of promoting the responsible use of the tech.",
       a: "computer professionals",
@@ -327,9 +333,10 @@ let JSS3comTst = [
       a: "layout tab",
       opt: ["view tab","layout tab","insert tab","none of the above"]},
 ]
-let JSS3ccaTst = [
-    {title: "JSS3 CCA Test",
+let JSS3bscTst = [
+    {title: "JSS3 Basic Science Test",
       category: "Tests",
+      code: "JSS3bscTst",
     
       q: "____ is the ornamentation of fabric using needle work.",
       a: "embriodery",
@@ -393,12 +400,12 @@ let JSS3ccaTst = [
 ]
 
 
-
 // SS1
 
 let SS1comTst = [
     {title: "SS1 Computer Science Test",
       category: "Tests",
+      code: "SS1comTst",
     
       q: "A typical Beginner's All-purpose Synmbolic Instructional Code algorithim ends with what command?",
       a: "END",
@@ -463,6 +470,7 @@ let SS1comTst = [
 let SS1ahTst = [
     {title: "SS1 Animal Husbandry Test",
       category: "Tests",
+      code: "SS1ahTst",
     
       q: "All these are systems in the body of a farm animal, except _____ system.",
       a: "egestive",
@@ -527,6 +535,7 @@ let SS1ahTst = [
 let SS1phyTst = [
     {title: "SS1 Physics Test",
       category: "Tests",
+      code: "SS1phyTst",
     
       q: "Sir Isaac Newton's laws of motion are also known as ____.",
       a: "New Instry Laws",
@@ -573,7 +582,405 @@ let SS1phyTst = [
       opt: ["1.2J","1,200J","12Nm","120J"]},
     {
       q: "A body moves along a circular path with uniform angular speed of 0.6rads<sup>-1</sup> and at a constant speed of 3.0ms<sup>-1</sup>. Calculate the acceleration of the body towards the centre of the circle. [WAEC 1995]",
-      a: "iphone",
+      a: "1.8ms<sup>-2</sup>",
+      opt: ["25.0ms<sup>-2</sup>","5.4ms<sup>-2</sup>","5.0ms<sup>-2</sup>","1.8ms<sup>-2</sup>"]},
+    {
+      q: "A ball is dropped from a height of 45m above the ground. Calculate the velocity of the ball just before it strikes the ground. (Neglect air resistance and take g as 10ms<sup>-2</sup>) [WAEC 1995]",
+      a: "30.0ms<sup>-1</sup>",
+      opt: ["21.1ms<sup>-1</sup>","30.0ms<sup>-1</sup>","300.0ms<sup>-1</sup>","900.0ms<sup>-1</sup>"]},
+    {
+      q: "A body of mass 4.2kg moving with a velocity 10ms<sup>-1</sup> due east, hits a stationary body of mass 2.8kg. If they stick together after collision and move with velocity v due east, calculate the value of v. [WAEC 1996]",
+      a: "6ms<sup>-1</sup>",
+      opt: ["3ms<sup>-1</sup>","6ms<sup>-1</sup>","7ms<sup>-1</sup>","15ms<sup>-1</sup>"]},
+    {
+      q: "A ball of mass 0.6kg is kicked vertically upward from the pitch by a player with a velocity of 20ms<sup>-1</sup>. Find the potential energy just before it hits the ground. [WAEC 1998]",
+      a: "120J",
+      opt: ["120J","1.2Nm","12Nm","1,200Nm"]},
+]
+
+
+// SS2
+
+let SS2comTst = [
+    {title: "SS2 Computer Science Test",
+      category: "Tests",
+      code: "SS2comTst",
+    
+      q: "A typical Beginner's All-purpose Synmbolic Instructional Code algorithim ends with what command?",
+      a: "END",
+      opt: ["STOP","CLS","PRINT","END"]},
+    {
+      q: "₦90,000 is the total sum of money budgetted to be paid to 3 employees. Write a BASIC program to display on the screen, the amount agreed to be paid to each worker. What logic did your program use?",
+      a: "90,000 / 3",
+      opt: ["3 / 90,000","90,000 / 3","90,000 ^ 3","90,000 * 3"]},
+    {
+      q: "The BASIC command CLS stands for  what?",
+      a: "Clear Screen",
+      opt: ["Clear String","Clear Storage","Clear Screen","Clear Scene"]},
+    {
+      q: "Information and Communication Technology is required for one of these.",
+      a: "information processing",
+      opt: ["information processing","sync processing","tech processing","big data science"]},
+    {
+      q: "Outlined hereafter, are tools for transmitting information, with the exception of one.",
+      a: "Intlex",
+      opt: ["SMS","fax","radio","Intlex"]},
+    {
+      q: "____ is the conveyance of message signals between two or multiple parties.",
+      a: "communication",
+      opt: ["technology","communication","automation","computation"]},
+    {
+      q: "ICT utilizes ____ number of communication strategies.",
+      a: "2",
+      opt: ["8","4","2","6"]},
+    {
+      q: "Which of these features are not of online chats?",
+      a: "none of the above",
+      opt: ["text messages","voice notes","video calls","none of the above"]},
+    {
+      q: "The following are not types of ICT, except one.",
+      a: "data network",
+      opt: ["data network","video conferencing","multiplex system","syncronous communication"]},
+    {
+      q: "In a multiplex system, ____ is required between the numerous transmitters and receivers.",
+      a: "transmission medium",
+      opt: ["point-to-point medium","transmitter medium","receptor medium","transmission medium"]},
+    {
+      q: "Which of these is not a component of information systems?",
+      a: "dataria",
+      opt: ["computer hardware","database","dataria","computer software"]},
+    {
+      q: "The word fragment &quot;tele&quot; from teleconferencing means ____.",
+      a: "distance",
+      opt: ["discussion","distance","sound","communication"]},
+    {
+      q: "What type of data network is the internet?",
+      a: "WAN",
+      opt: ["LAN","MAN","WAN","WLAN"]},
+    {
+      q: "____ is not synonymous to MOBILE phone.",
+      a: "home phone",
+      opt: ["cell phone","wireless phone","home phone","smart phone"]},
+    {
+      q: "What is the full name of your Computer Teacher?",
+      a: "Joshua Uchenna Ngwuoke",
+      opt: ["Joshua Uchenna Ngwuoke","Joshua Uchenna Ugwuoke","Joshua Uchechi Ngwuoke","Joshua Uchechi Ugwoke"]},
+]
+let SS2ahTst = [
+    {title: "SS2 Animal Husbandry Test",
+      category: "Tests",
+      code: "SS2ahTst",
+    
+      q: "All these are systems in the body of a farm animal, except _____ system.",
+      a: "egestive",
+      opt: ["skeletal","endocrine","respiratory","egestive"]},
+    {
+      q: "Excretion is the process by which living things pass out ____ products.",
+      a: "waste",
+      opt: ["waste","excess","unprocessed","solid"]},
+    {
+      q: "All of the skin components are dead, except ____ layer.",
+      a: "malpigian",
+      opt: ["cornified","granular","malpigian","papillary"]},
+    {
+      q: "The ____ is the true skin.",
+      a: "dermis",
+      opt: ["recticular layer","epidermis","melanin","dermis"]},
+    {
+      q: "The following are layers of the epidermis, except _____ layer.",
+      a: "papillary",
+      opt: ["cornified","granular","malpigian","papillary"]},
+    {
+      q: "Which of these is not found in the papillary layer?",
+      a: "erector muscles",
+      opt: ["feathers","scales","erector muscles","hairs"]},
+    {
+      q: "The removal of a farm animal's horn is called ____.",
+      a: "dehorning",
+      opt: ["dehorning","rehorning","inhorning","unhorning"]},
+    {
+      q: "Bones are joined to bones by _____.",
+      a: "ligaments",
+      opt: ["tendons","ligaments","cartilages","arteries"]},
+    {
+      q: "Where in the body of a farm animal is blood formed?",
+      a: "bone marrow",
+      opt: ["bone joints","bone surface","bone marrow","tendons"]},
+    {
+      q: "The removal of a farm animal's nail is called ____.",
+      a: "despuring",
+      opt: ["denailing","dispuring","desnailing","despuring"]},
+    {
+      q: "All of these, but one is a problem of beaks.",
+      a: "nutrition",
+      opt: ["nutrition","canibalism","egg eating","fighting"]},
+    {
+      q: "NaOH used in dehorning is also known as all of the following, except _____.",
+      a: "Rustic Soda",
+      opt: ["Caustic Suda","Sodium Hydroxide","Rustic Soda","NaOH<sub>(conc.)</sub>"]},
+    {
+      q: "What is PH?",
+      a: "Power of Hydrogen",
+      opt: ["Power of Hydrogen","Hydroxide Ion Concentration","Hydopower","Power of Helium"]},
+    {
+      q: "What is ADT?",
+      a: "Adenocinetriphosphate",
+      opt: ["Adesobintriphosphate","Abedesiinetriphosphate","Adenocinetriphosphate","fingers"]},
+    {
+      q: "What hormone is responsible for the skin pigmentation of a farm animal?",
+      a: "melanin",
+      opt: ["melanin","renin","keratin","pepsin"]},
+]
+let SS2phyTst = [
+    {title: "SS2 Physics Test",
+      category: "Tests",
+      code: "SS2phyTst",
+    
+      q: "Sir Isaac Newton's laws of motion are also known as ____.",
+      a: "New Instry Laws",
+      opt: ["Motion Laws","New Instry Laws","New Physics Laws","New Newton Laws"]},
+    {
+      q: "Which of these equations expresses the second postulation contained in the theory of motion by Newton?",
+      a: "S = ut + <sup>1</sup>/<sub>2</sub>at<sup>2</sup>",
+      opt: ["v = u + at","S = ut + <sup>1</sup>/<sub>2</sub>at<sup>2</sup>","v<sup>2</sup> = u<sup>2</sup> + 2as","S = u<sup>2</sup> + </sub>at<sup>2</sup>"]},
+    {
+      q: "The first instry law is also known as ____.",
+      a: "inertia",
+      opt: ["inertia","gravitation","exertia","none of the above"]},
+    {
+      q: "Which of the following is a type of distance?",
+      a: "displacement",
+      opt: ["displacement","gravity","velocity","acceleration"]},
+    {
+      q: "We measure how fast an object is moving in a particular direction in ____.",
+      a: "ms<sup>-1</sup>",
+      opt: ["m","ms<sup>-1</sup>","ms<sup>-2</sup>","kh<sup>-2</sup>"]},
+    {
+      q: "Time is all of the following, except ____.",
+      a: "ms<sup>-1</sup>",
+      opt: ["t","an interval","ms<sup>-1</sup>","a scalar"]},
+    {
+      q: "How far will a body move in 4s if uniformly accelerated from rest at the rate of 2ms<sup>-2</sup>?",
+      a: "8m",
+      opt: ["4m","8m","16m","32m"]},
+    {
+      q: "A horizontal force of 0.9N acts upon a body of mass (0.1kg). There is resistance of 0.15N opposing the force. Find the acceleration.",
+      a: "7.50ms<sup>-2</sup>",
+      opt: ["0.75ms<sup>-2</sup>","70.50ms<sup>-2</sup>","0.0075ms<sup>-2</sup>","7.50ms<sup>-2</sup>"]},
+    {
+      q: "What is the dimension for force?",
+      a: "MLT<sup>2</sup>T<sup>-3</sup>",
+      opt: ["MLT<sup>3</sup>T<sup>-2</sup>","ML<sup>2</sup>T<sup>-3</sup>","MT<sup>2</sup>T<sup>-3</sup>","MLT<sup>2</sup>T<sup>-3</sup>"]},
+    {
+      q: "____ is the mechanical manifestation of energy.",
+      a: "work",
+      opt: ["force","power","work","pressure"]},
+    {
+      q: "A body of mass 0.6kg is thrown vertically upward from the ground with a speed of 20ms<sup>-1</sup>. Calculate the potential energy at the maximum height reached. [WAEC 1998]",
+      a: "120J",
+      opt: ["1.2J","1,200J","12Nm","120J"]},
+    {
+      q: "A body moves along a circular path with uniform angular speed of 0.6rads<sup>-1</sup> and at a constant speed of 3.0ms<sup>-1</sup>. Calculate the acceleration of the body towards the centre of the circle. [WAEC 1995]",
+      a: "1.8ms<sup>-2</sup>",
+      opt: ["25.0ms<sup>-2</sup>","5.4ms<sup>-2</sup>","5.0ms<sup>-2</sup>","1.8ms<sup>-2</sup>"]},
+    {
+      q: "A ball is dropped from a height of 45m above the ground. Calculate the velocity of the ball just before it strikes the ground. (Neglect air resistance and take g as 10ms<sup>-2</sup>) [WAEC 1995]",
+      a: "30.0ms<sup>-1</sup>",
+      opt: ["21.1ms<sup>-1</sup>","30.0ms<sup>-1</sup>","300.0ms<sup>-1</sup>","900.0ms<sup>-1</sup>"]},
+    {
+      q: "A body of mass 4.2kg moving with a velocity 10ms<sup>-1</sup> due east, hits a stationary body of mass 2.8kg. If they stick together after collision and move with velocity v due east, calculate the value of v. [WAEC 1996]",
+      a: "6ms<sup>-1</sup>",
+      opt: ["3ms<sup>-1</sup>","6ms<sup>-1</sup>","7ms<sup>-1</sup>","15ms<sup>-1</sup>"]},
+    {
+      q: "A ball of mass 0.6kg is kicked vertically upward from the pitch by a player with a velocity of 20ms<sup>-1</sup>. Find the potential energy just before it hits the ground. [WAEC 1998]",
+      a: "120J",
+      opt: ["120J","1.2Nm","12Nm","1,200Nm"]},
+]
+
+
+// SS3
+
+let SS3comTst = [
+    {title: "SS3 Computer Science Test",
+      category: "Tests",
+      code: "SS3comTst",
+    
+      q: "A typical Beginner's All-purpose Synmbolic Instructional Code algorithim ends with what command?",
+      a: "END",
+      opt: ["STOP","CLS","PRINT","END"]},
+    {
+      q: "₦90,000 is the total sum of money budgetted to be paid to 3 employees. Write a BASIC program to display on the screen, the amount agreed to be paid to each worker. What logic did your program use?",
+      a: "90,000 / 3",
+      opt: ["3 / 90,000","90,000 / 3","90,000 ^ 3","90,000 * 3"]},
+    {
+      q: "The BASIC command CLS stands for  what?",
+      a: "Clear Screen",
+      opt: ["Clear String","Clear Storage","Clear Screen","Clear Scene"]},
+    {
+      q: "Information and Communication Technology is required for one of these.",
+      a: "information processing",
+      opt: ["information processing","sync processing","tech processing","big data science"]},
+    {
+      q: "Outlined hereafter, are tools for transmitting information, with the exception of one.",
+      a: "Intlex",
+      opt: ["SMS","fax","radio","Intlex"]},
+    {
+      q: "____ is the conveyance of message signals between two or multiple parties.",
+      a: "communication",
+      opt: ["technology","communication","automation","computation"]},
+    {
+      q: "ICT utilizes ____ number of communication strategies.",
+      a: "2",
+      opt: ["8","4","2","6"]},
+    {
+      q: "Which of these features are not of online chats?",
+      a: "none of the above",
+      opt: ["text messages","voice notes","video calls","none of the above"]},
+    {
+      q: "The following are not types of ICT, except one.",
+      a: "data network",
+      opt: ["data network","video conferencing","multiplex system","syncronous communication"]},
+    {
+      q: "In a multiplex system, ____ is required between the numerous transmitters and receivers.",
+      a: "transmission medium",
+      opt: ["point-to-point medium","transmitter medium","receptor medium","transmission medium"]},
+    {
+      q: "Which of these is not a component of information systems?",
+      a: "dataria",
+      opt: ["computer hardware","database","dataria","computer software"]},
+    {
+      q: "The word fragment &quot;tele&quot; from teleconferencing means ____.",
+      a: "distance",
+      opt: ["discussion","distance","sound","communication"]},
+    {
+      q: "What type of data network is the internet?",
+      a: "WAN",
+      opt: ["LAN","MAN","WAN","WLAN"]},
+    {
+      q: "____ is not synonymous to MOBILE phone.",
+      a: "home phone",
+      opt: ["cell phone","wireless phone","home phone","smart phone"]},
+    {
+      q: "What is the full name of your Computer Teacher?",
+      a: "Joshua Uchenna Ngwuoke",
+      opt: ["Joshua Uchenna Ngwuoke","Joshua Uchenna Ugwuoke","Joshua Uchechi Ngwuoke","Joshua Uchechi Ugwoke"]},
+]
+let SS3ahTst = [
+    {title: "SS3 Animal Husbandry Test",
+      category: "Tests",
+      code: "SS3ahTst",
+    
+      q: "All these are systems in the body of a farm animal, except _____ system.",
+      a: "egestive",
+      opt: ["skeletal","endocrine","respiratory","egestive"]},
+    {
+      q: "Excretion is the process by which living things pass out ____ products.",
+      a: "waste",
+      opt: ["waste","excess","unprocessed","solid"]},
+    {
+      q: "All of the skin components are dead, except ____ layer.",
+      a: "malpigian",
+      opt: ["cornified","granular","malpigian","papillary"]},
+    {
+      q: "The ____ is the true skin.",
+      a: "dermis",
+      opt: ["recticular layer","epidermis","melanin","dermis"]},
+    {
+      q: "The following are layers of the epidermis, except _____ layer.",
+      a: "papillary",
+      opt: ["cornified","granular","malpigian","papillary"]},
+    {
+      q: "Which of these is not found in the papillary layer?",
+      a: "erector muscles",
+      opt: ["feathers","scales","erector muscles","hairs"]},
+    {
+      q: "The removal of a farm animal's horn is called ____.",
+      a: "dehorning",
+      opt: ["dehorning","rehorning","inhorning","unhorning"]},
+    {
+      q: "Bones are joined to bones by _____.",
+      a: "ligaments",
+      opt: ["tendons","ligaments","cartilages","arteries"]},
+    {
+      q: "Where in the body of a farm animal is blood formed?",
+      a: "bone marrow",
+      opt: ["bone joints","bone surface","bone marrow","tendons"]},
+    {
+      q: "The removal of a farm animal's nail is called ____.",
+      a: "despuring",
+      opt: ["denailing","dispuring","desnailing","despuring"]},
+    {
+      q: "All of these, but one is a problem of beaks.",
+      a: "nutrition",
+      opt: ["nutrition","canibalism","egg eating","fighting"]},
+    {
+      q: "NaOH used in dehorning is also known as all of the following, except _____.",
+      a: "Rustic Soda",
+      opt: ["Caustic Suda","Sodium Hydroxide","Rustic Soda","NaOH<sub>(conc.)</sub>"]},
+    {
+      q: "What is PH?",
+      a: "Power of Hydrogen",
+      opt: ["Power of Hydrogen","Hydroxide Ion Concentration","Hydopower","Power of Helium"]},
+    {
+      q: "What is ADT?",
+      a: "Adenocinetriphosphate",
+      opt: ["Adesobintriphosphate","Abedesiinetriphosphate","Adenocinetriphosphate","fingers"]},
+    {
+      q: "What hormone is responsible for the skin pigmentation of a farm animal?",
+      a: "melanin",
+      opt: ["melanin","renin","keratin","pepsin"]},
+]
+let SS3phyTst = [
+    {title: "SS3 Physics Test",
+      category: "Tests",
+      code: "SS3phyTst",
+    
+      q: "Sir Isaac Newton's laws of motion are also known as ____.",
+      a: "New Instry Laws",
+      opt: ["Motion Laws","New Instry Laws","New Physics Laws","New Newton Laws"]},
+    {
+      q: "Which of these equations expresses the second postulation contained in the theory of motion by Newton?",
+      a: "S = ut + <sup>1</sup>/<sub>2</sub>at<sup>2</sup>",
+      opt: ["v = u + at","S = ut + <sup>1</sup>/<sub>2</sub>at<sup>2</sup>","v<sup>2</sup> = u<sup>2</sup> + 2as","S = u<sup>2</sup> + </sub>at<sup>2</sup>"]},
+    {
+      q: "The first instry law is also known as ____.",
+      a: "inertia",
+      opt: ["inertia","gravitation","exertia","none of the above"]},
+    {
+      q: "Which of the following is a type of distance?",
+      a: "displacement",
+      opt: ["displacement","gravity","velocity","acceleration"]},
+    {
+      q: "We measure how fast an object is moving in a particular direction in ____.",
+      a: "ms<sup>-1</sup>",
+      opt: ["m","ms<sup>-1</sup>","ms<sup>-2</sup>","kh<sup>-2</sup>"]},
+    {
+      q: "Time is all of the following, except ____.",
+      a: "ms<sup>-1</sup>",
+      opt: ["t","an interval","ms<sup>-1</sup>","a scalar"]},
+    {
+      q: "How far will a body move in 4s if uniformly accelerated from rest at the rate of 2ms<sup>-2</sup>?",
+      a: "8m",
+      opt: ["4m","8m","16m","32m"]},
+    {
+      q: "A horizontal force of 0.9N acts upon a body of mass (0.1kg). There is resistance of 0.15N opposing the force. Find the acceleration.",
+      a: "7.50ms<sup>-2</sup>",
+      opt: ["0.75ms<sup>-2</sup>","70.50ms<sup>-2</sup>","0.0075ms<sup>-2</sup>","7.50ms<sup>-2</sup>"]},
+    {
+      q: "What is the dimension for force?",
+      a: "MLT<sup>2</sup>T<sup>-3</sup>",
+      opt: ["MLT<sup>3</sup>T<sup>-2</sup>","ML<sup>2</sup>T<sup>-3</sup>","MT<sup>2</sup>T<sup>-3</sup>","MLT<sup>2</sup>T<sup>-3</sup>"]},
+    {
+      q: "____ is the mechanical manifestation of energy.",
+      a: "work",
+      opt: ["force","power","work","pressure"]},
+    {
+      q: "A body of mass 0.6kg is thrown vertically upward from the ground with a speed of 20ms<sup>-1</sup>. Calculate the potential energy at the maximum height reached. [WAEC 1998]",
+      a: "120J",
+      opt: ["1.2J","1,200J","12Nm","120J"]},
+    {
+      q: "A body moves along a circular path with uniform angular speed of 0.6rads<sup>-1</sup> and at a constant speed of 3.0ms<sup>-1</sup>. Calculate the acceleration of the body towards the centre of the circle. [WAEC 1995]",
+      a: "1.8ms<sup>-2</sup>",
       opt: ["25.0ms<sup>-2</sup>","5.4ms<sup>-2</sup>","5.0ms<sup>-2</sup>","1.8ms<sup>-2</sup>"]},
     {
       q: "A ball is dropped from a height of 45m above the ground. Calculate the velocity of the ball just before it strikes the ground. (Neglect air resistance and take g as 10ms<sup>-2</sup>) [WAEC 1995]",
