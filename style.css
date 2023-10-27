@@ -211,6 +211,8 @@ logged-out {
     font-size: 20px;
 }
 #tabbar > div{
+    font-size: 12px;
+    font-weight: bold;
     flex: 25%;
     border-top: 3px #202c33 solid;
     padding: 10px 15px;
@@ -343,10 +345,13 @@ logged-out {
     content:"\f00d";
     color: #fff!important;
 }
-#cancelNote::before, #classes::before, #students::before, .no-activity::before, .activeOpt::before, #closedStatus::before, .smartTime::before, #time::before, #questions::before, #trials::before {
+.news::before, #cancelNote::before, #classes::before, #students::before, .no-activity::before, .activeOpt::before, .smartTime::before, #time::before, #questions::before, #trials::before {
     font-family: "Font Awesome 6 Free";
     font-weight: bold;
     color: #8696a0;
+}
+.news::before {
+    content:"\f27a\a";
 }
 .smartTime::before {
     content:"\f017\a";
@@ -396,10 +401,15 @@ logged-out {
 noActivity, .closedStatus {
     top: calc(50% - 23px);
 }
-.successMsg, .openStatus{
+.openStatus {
+    text-align: center;
+    margin: 8px 0 0;
+    padding-bottom: 73px;
+}
+.successMsg {
     top: 50%;
 }
-noActivity, .successMsg, .closedStatus, .openStatus {
+noActivity, .successMsg, .closedStatus {
     width: 100%;
     text-align: center;
     position: absolute;
@@ -408,14 +418,6 @@ noActivity, .successMsg, .closedStatus, .openStatus {
 }
 #portal .card {
     text-align: center;
-}
-#closedStatus {
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-#closedStatus::before {
-    content:"\f023\a"
 }
 .instructor {
     text-align: center;
@@ -481,30 +483,34 @@ noActivity, .successMsg, .closedStatus, .openStatus {
 }
 #board h2, #board h3, #board h4 {
     text-decoration: underline;
+    text-align: center;
 }
 #board h2::after, #board h3::after, #board h4::after {
     content: ":";
-    text-decoration: none!important;
 }
 #board li {
     margin: 8px 0;
 }
-#board ol  ol {
+#board ol ol {
     list-style-type: lower-latin;
 }
-#board ol  ol ol {
+#board ol ol ol {
     list-style-type: lower-roman;
 }
-#board ol  ol ol ol {
+#board ol ol ol ol {
     list-style-type: upper-latin;
 }
-#board ol  ol ol ol ol {
+#board ol ol ol ol ol {
     list-style-type: upper-roman;
 }
 #board img {
     overflow-x: auto;
     display: block;
     width: 100%;
+}
+#board div {
+    text-align: center!important;
+    font-style: italic;
 }
 
 /* Quiz*/
@@ -703,6 +709,7 @@ noActivity, .successMsg, .closedStatus, .openStatus {
     /* For desktop: */
 }
 
+/* Audio */
 
 audio {
     visibility: hidden;

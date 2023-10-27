@@ -1,6 +1,16 @@
-////////////////////////////////
-// SPLASH SCREEN //
-////////////////////////////////
+// SOUND ENGINE:
+
+$.fn.play=(sound)=>{
+    let x = $("" + sound + "")[0];
+    x.play();
+}
+$.fn.reset=(sound)=>{
+    let y = $("" + sound + "")[0];
+    y.pause();
+    y.currentTime = 0;
+}
+
+// SPLASH SCREEN:
 
 document.onreadystatechange =()=>{
     if (document.readyState !== "complete") {
@@ -13,18 +23,13 @@ document.onreadystatechange =()=>{
     $('input').attr({'autocomplete': 'off', 'autocapitalized': 'false', 'spellcheck': 'false'});
 }
 
-
-
-/////////////////////////////
-// LOGIN SYSTEM //
-/////////////////////////////
+// LOGIN SYSTEM:
 
 $('#log-submit').click(()=>{
     if($('#pCode').val() == "142167" && $('#stuID').val() == "ekastu") {
         $('logged-out').css('display', 'none');
         $('#portal').show();
-        let success = document.querySelector("#success");
-        success.play();
+        $.fn.play("#success");
     } else {
         $("#login-error").animate({"height":"80px"})
         setInterval(() => {
@@ -32,33 +37,25 @@ $('#log-submit').click(()=>{
         }, 10000);
         $('#pCode').val('');
         $('#stuID').val('');
-        let error = document.querySelector("#error");
-        error.play();
+        $.fn.play("#error");
     }
 });
 
+// 2 PORTAL UPDATE ENGINES:
 
+/* NOTE: Running the wrong Portal Update Engine or two engines at a time will result in both functional and display irregularities. */
 
-////////////////////////////////////////////
-// PORTAL UPDATE ENGINE //
-////////////////////////////////////////////
-
-// NOTE: Running the wrong Portal Update Engine or two engines at a time will result in both functional and display irregularities.
-
-/**********************************
-                        ENGINE 1
-            Features:
-* Allows tests
-* Leaves portal open from 5pm to 10pm
-* Closes portal from 10pm to 5pm
-* Suitable for test period
-**********************************/
+/*              ENGINE 1:
+    * Allows tests
+    * Leaves portal open from 5pm to 10pm
+    * Closes portal from 10pm to 5pm
+    * Suitable for test period */
 
 /* updatePortal=()=>{
     let now = new Date(),
     min = now.getMinutes(),
     hr = now.getHours() + 1
-    // SMART (NATURAL) TIME DISPLAY
+    // Natural Time Display
     smartTime=()=>{
         if (hrLeft == 1) { // singular hr if = 1
             hrLeft = `${hrLeft} hour`;
@@ -76,7 +73,7 @@ $('#log-submit').click(()=>{
             minLeft = `${minLeft} minutes`;
         }
     }
-    // TAB AND PAGE NAVIGATION FUNCTION
+    // Tab and Page Navigation
     activeTab=(pg_title, tab_numb)=>{
         $('#titlebar').html(pg_title);
         $('#page div.page:not(:nth-child(' + tab_numb + '))').hide();
@@ -84,32 +81,30 @@ $('#log-submit').click(()=>{
         $('#tabbar div:not(:nth-child(' + tab_numb + '))').removeClass('active-tab');
         $('#tabbar div:nth-child(' + tab_numb + ')').addClass('active-tab');
     }
-    // IF TIME IS GREATER THAN OR EQUAL TO 5PM
+    // If Time is Greater Than or Equal to 5pm
     if (hr > 18 || hr < 23) {
         console.log('Time is greater than 5pm or, less than 10pm -> ' + hr)
-        //time
+        // Time and Announcement
         let hrStr = '' + (22 - hr) + ''
         hrLeft = hrStr,
         minLeft = 60 - min
         smartTime()
         $('#portal').html(`
         <div  class="openStatus">
-            <span class="fa-stack fa-2x successStack stack">
-                <i class="fas fa-circle fa-xstack-2x"></i>
-                <i class="fa fa-lock-open fa-stack-1x successIcon stackIcon"></i>
-            </span>
+        <i class="fa fa-lock-open successIcon stackIcon"></i>
             <div id="msgTitle">OPEN!</div>
             <div>The portal is currently open.</div>
             <div class="card smartTime">Closing in the next <b>${hrLeft} ${minLeft}</b></div>
+            <div class="card news">${announcement}</div>
             <div class="card instructor"><div id="instCard">
                 <div><img src="img/pic.jpg"></div>
                 <div id="instName">J. U. Ngwuoke
-                    <div id="ln-2">SSCE,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
+                <div id="ln-2">SSCE,&nbsp;ASIC&nbsp;UK,&nbsp;B.Sc</div>
                 </div>
                 <i class="fa fa-wifi-3" id="live"></i>
             </div></div>
         </div>`)
-        // when a tab is clicked ...
+        // When Tab is Clicked
         $("#showPortal").click(()=>{
             activeTab('Portal', 1);
         })
@@ -123,14 +118,14 @@ $('#log-submit').click(()=>{
             activeTab('Tests', 4);
         })
     }
-    // IF TIME IS LESS THAN 5PM OR, GREATER THAN OR EQUAL TO 10PM
+    // If Time is Less Than 5pm, or Greater Than or Equal to 10pm
     if (hr < 18 || hr >= 23) {
         console.log('Time is less than 5pm or, greater than or equal to 10pm -> ' + hr)
         $('#portal').show();
         //time
         let hrStr = '' + (17 - hr) + ''
-        if (hrStr.search('-') == 0) { // if hr difference is negative
-            hrLeft = hr - 5 // current hr - open duration
+        if (hrStr.search('-') == 0) { // If hr difference is negative
+            hrLeft = hr - 5 // Current hr - open duration
         } else {
             hrLeft = hrStr;
         }
@@ -151,18 +146,14 @@ $('#log-submit').click(()=>{
 }
 setInterval(updatePortal, 1000) */
 
-
-/**********************************
-                        ENGINE 2
-            Features:
-* Allows copying note
-* Leaves portal open
-* Never closes portal
-* Suitable for non-test period
-**********************************/
+/*              ENGINE 2:
+    * Allows copying note
+    * Leaves portal open
+    * Never closes portal
+    * Suitable for non-test period */
 
 updatePortal=()=>{
-    // TAB AND PAGE NAVIGATION FUNCTION
+    // Tab and Page Navigation
     activeTab=(pg_title, tab_numb)=>{
         $('#titlebar').html(pg_title);
         $('#page div.page:not(:nth-child(' + tab_numb + '))').hide();
@@ -170,13 +161,14 @@ updatePortal=()=>{
         $('#tabbar div:not(:nth-child(' + tab_numb + '))').removeClass('active-tab');
         $('#tabbar div:nth-child(' + tab_numb + ')').addClass('active-tab');
     }
-    // TIME
+    // Time and Announcement
     $('#portal').html(`
     <div  class="openStatus">
     <i class="fa fa-lock-open successIcon stackIcon"></i>
         <div id="msgTitle">OPEN!</div>
         <div>The portal is currently open.</div>
         <div class="card smartTime">Now always <b>open</b></div>
+        <div class="card news">${announcement}</div>
         <div class="card instructor"><div id="instCard">
             <div><img src="img/pic.jpg"></div>
             <div id="instName">J. U. Ngwuoke
@@ -185,7 +177,7 @@ updatePortal=()=>{
             <i class="fa fa-wifi-3" id="live"></i>
         </div></div>
     </div>`)
-    // WHEN TAB IS CLICKED ...
+    // When Tab is Clicked
     $("#showPortal").click(()=>{
         activeTab('Portal', 1);
     })
@@ -201,20 +193,16 @@ updatePortal=()=>{
 }
 setInterval(updatePortal, 1000)
 
+// CONTENT ENGINE:
 
-
-//////////////////////////////////
-// CONTENT ENGINE //
-//////////////////////////////////
-
-// PAGE BOTTOM MARGIN FIX
+// Page Bottom Margin Fix
 $(".page").append("<br><br><br><br>");
-// NO ACTIVITY PAGE
+// "No Activity" Page
 $("noActivity").html(`
 <i class="fa fa-bell-slash noActivityIcon stackIcon"></i>
 <div id="msgTitle">No Activity!</div>
 <div>There are no activities at this time.</div>`);
-// COURSES PAGE
+// "Courses" Page
 $("#courses").prepend(`
 <div id="courseListing">
 <div class="course">
@@ -230,6 +218,7 @@ $("#courses").prepend(`
     <div id="classes">JSS1 to JSS3</div>
     <div id="students">30+ Students</div>
     <div id="description">Basic Science is the foundation of scientific knowledge. It is comprised of the fundamental principles of natural sciences, such as physics, chemistry and biology.</div>
+    <JSS2bsc></JSS2bsc>
     <JSS3bsc></JSS3bsc>
 </div>
 <div class="course">
@@ -245,6 +234,8 @@ $("#courses").prepend(`
     <div id="classes">SS1 & SS2</div>
     <div id="students">10+ Students</div>
     <div id="description">Animal Husbandry is the management and care of farm animals by humans for profit, in which genetic qualities and behaviour, considered to be advantegeous to humans, are further developed.</div>
+    <SS1ah></SS1ah>
+    <SS2ah></SS2ah>
 </div>
 </div>
 <div id="note">
@@ -253,7 +244,7 @@ $("#courses").prepend(`
     <button id="cancelNote"></button>
 </div>
 `);
-// TESTS PAGE
+// "Tests" Page
 $.fn.loadTest=(quiz)=>{
     let q = quiz[0].code, t =quiz[0].title
     $(q).html(`
@@ -300,7 +291,7 @@ $("#showTests").click(()=>{
         $.fn.loadTest(tests[i]);
     }
 })
-// NOTE CARD & PAGE
+// Note Card and "Notes" Page
 $.fn.loadNote=(note)=>{
     let n = note[0].code, t =note[0].title;
     $(n).html(`
@@ -319,11 +310,7 @@ $("#showCourses").click(()=>{
     }
 })
 
-
-
-//////////////////////////
-// NOTE ENGINE //
-//////////////////////////
+// NOTE ENGINE:
 
 $.fn.copy=(note)=>{
     $('#courseListing').hide();
@@ -335,47 +322,43 @@ $.fn.copy=(note)=>{
     });
     typed.typeString("" + note[0].note + "").start();
     $('#cancelNote').show();
-    let hello = document.querySelector("#hello");
-    hello.play();
+    $.fn.play("#hello");
     $('#cancelNote').click(()=>{
+        $("#titlebar").html('Courses');
         $('#cancelNote').hide();
         $('#note').hide();
         $('#courseListing').show();
         $('#courses br').show();
-        hello.pause();
+        $.fn.reset("#hello");
     })
-    $('#board').click(()=>{
-        $("#titlebar").html(note[0].category);
+    $('#note').hover(()=>{
+        $("#board").html(note[0].title);
     })
 }
 
-
-
-//////////////////////////
-// QUIZ ENGINE //
-//////////////////////////
+// QUIZ ENGINE:
 
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
-
-// getting questions and options from array
+// Getting Questions and Options From Array
 showQuestions=(index, quiz)=>{
     const option_list = document.querySelector("#optionList"),
     que_text = document.querySelector("#question"),
     quizTitle = document.querySelector('#titlebar'),
     next_btn = document.querySelector("#nxtQuest"),
     quesCounter = document.querySelector("#questLeft");
-        
-    // if Next Que button clicked
+    // When Next Que button is clicked
     next_btn.onclick = ()=>{
-        if (que_count < quiz.length - 1) { //if question count is less than total question length
-            que_count++; //increment the que_count value
-            que_numb++; //increment the que_numb value
-            showQuestions(que_count, quiz); //calling showQestions function
-            queCounter(que_numb); //passing que_numb value to queCounter
+        // If question count is less than total question length
+        if (que_count < quiz.length - 1) {
+            que_count++; // Increment the que_count value
+            que_numb++; // Increment the que_numb value
+            showQuestions(que_count, quiz); // Calling showQestions function
+            queCounter(que_numb); // Passing que_numb value to queCounter
         } else {
-            showResult(); //calling showResult function
+            showResult(); // Calling showResult function
+            $.fn.play("#success");
             exitQuiz=()=>{
                 que_count = 0;
                 que_numb = 1;
@@ -388,12 +371,11 @@ showQuestions=(index, quiz)=>{
                 $('#quizListing').show();
                 $('#quiz').removeClass('resQuizCrd');
                 $("#nxtQuest").html('NEXT QUESTION');
-                $("#titlebar").html(quiz[0].category);
             }
         }
     }
-
-    if(que_count == quiz.length - 1){ // if question count is equal to total question length
+    // If question count is equal to total question length
+    if(que_count == quiz.length - 1){
         $("#nxtQuest").html('Submit');
         $("#nxtQuest").addClass('submit');
         $("#quizActive").append(`
@@ -409,25 +391,21 @@ showQuestions=(index, quiz)=>{
             <button type="submit" id="subQuest">Submit</button>
         </form>`);
     }
-    
-    // click form submission button with next question button
+    // Click form submission button with next question button
     $('.submit').click(()=>{
         $('#subQuest').click();
     })
-
-    //creating div tag for question and option and passing the value using array index
+    // Creating div tag for question and option and passing the value using array index
     let title_tag = quiz[0].title,
     que_tag = quiz[index].q,
     option_tag = '<div class="option">'+ quiz[index].opt[0] +'</div>'
     + '<div class="option">'+ quiz[index].opt[1] +'</div>'
     + '<div class="option">'+ quiz[index].opt[2] +'</div>'
     + '<div class="option">'+ quiz[index].opt[3] +'</div>';
-    quizTitle.innerHTML = title_tag; //adding new span tag inside que_tag
-    que_text.innerHTML = que_tag; //adding new span tag inside que_tag
-    option_list.innerHTML = option_tag; //adding new div tag inside option_tag
-
+    quizTitle.innerHTML = title_tag; // Adding new span tag inside que_tag
+    que_text.innerHTML = que_tag; // Adding new span tag inside que_tag
+    option_list.innerHTML = option_tag; // Adding new div tag inside option_tag
     const opt = option_list.querySelectorAll(".option");
-
     opt[0].onclick = () => {
         optionSelected(opt[0]);
         opt[0].classList.add("activeOpt");
@@ -444,27 +422,25 @@ showQuestions=(index, quiz)=>{
         optionSelected(opt[3]);
         opt[3].classList.add("activeOpt");
     };
-
     function optionSelected(answer) {
-        let userAns = answer.textContent; //getting user selected option
-        let correcAns = quiz[que_count].a; //getting correct answer from array
+        let userAns = answer.textContent; // Getting user selected option
+        let correcAns = quiz[que_count].a; // Getting correct answer from array
         const allOptions = option_list.children.length; //getting all option items
         console.log(userAns);
-        if(userAns == correcAns){ //if user selected option is equal to array's correct answer
-            userScore += 1; //upgrading score value with 1
+        if(userAns == correcAns){ // If user selected option is equal to array's correct answer
+            userScore += 1; // Upgrading score value with 1
             console.log("Correct Answer");
             console.log("Your correct answers = " + userScore);
         }else{
             console.log("Wrong Answer");
         }
         for(i=0; i < allOptions; i++){
-            option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
+            option_list.children[i].classList.add("disabled"); // Once user select an option then disabled all options
         }
     }
-
     function showResult(){
         title_tag = quiz[0].title + ' Result ';
-        quizTitle.innerHTML = title_tag; //adding new span tag inside que_tag
+        quizTitle.innerHTML = title_tag; // Adding new span tag inside que_tag
         let quizCrd = document.querySelector('#quiz');
         quizCrd.classList.add('resQuizCrd');
         $('#quizActive').hide();
@@ -476,22 +452,21 @@ showQuestions=(index, quiz)=>{
         let cResult = `<div id="cResult"><p>GRADE: <b>C</b></p><h3><i class="fa fa-check-circle"></i> Not Bad, ${$('#fName').val()}!</h3><p>You scored <b>${userScore}</b> out of <b>${quiz.length}</b> questions―it's an <b>average score</b>. I believe you will do better.</p></div>`;
         let dResult = `<div id="dResult"><p>GRADE: <b>D</b></p><h3><i class="fa fa-book-reader"></i> Please Study, ${$('#fName').val()}!</h3><p>You scored <b>${userScore}</b> out of <b>${quiz.length}</b> questions―it's a <b>low score</b>. Kindly revise what you've learnt more often.</p></div>`;
         let fResult = `<div id="fResult"><p>GRADE: <b>F</b></p><h3><i class="fa fa-book"></i> Study Hard, ${$('#fName').val()}!</h3><p>You scored <b>${userScore}</b> out of <b>${quiz.length}</b> questions―it's a <b>poor score</b>. Please go back to your notes.</p></div>`;
-        if (userScore >= 15){ quizResults.html(eResult);}
-        else if(userScore >= 12){ quizResults.html(aResult);}
-        else if(userScore >= 10){ quizResults.html(bResult);}
-        else if(userScore >= 8){ quizResults.html(cResult);}
-        else if(userScore >= 6){ quizResults.html(dResult);}
-        else{ quizResults.html(fResult);}
+        if (userScore >= 15){ quizResults.html(eResult)}
+        else if(userScore >= 12){ quizResults.html(aResult)}
+        else if(userScore >= 10){ quizResults.html(bResult)}
+        else if(userScore >= 8){ quizResults.html(cResult)}
+        else if(userScore >= 6){ quizResults.html(dResult)}
+        else{ quizResults.html(fResult)}
         $('#quizResults').append("<div class='card instruction'><b>*</b> Please <b>do not retake</b> this assessment. It may block all your scores from submitting properly.</div><button onclick='exitQuiz()'>Exit</button>");
     }
-    
     queCounter=(index)=>{
-        //creating a new span tag and passing the question number and total question
+        // Creating a new span tag and passing the question number and total question
         totalQueCounTag = '<b>'+ index +'</b> of <b>' + quiz.length + '</b> Questions';
-        quesCounter.innerHTML = totalQueCounTag;  //adding new span tag inside quesCounter
+        quesCounter.innerHTML = totalQueCounTag;  // Adding new span tag inside quesCounter
     }
 }
-
+// Require Student Information
 $('#stuInfo input').on('input', ()=>{
     if ($('#fName').val() !== '' && $('#lName').val() !== '') {
         $('.proceedBtn').show();
@@ -499,14 +474,14 @@ $('#stuInfo input').on('input', ()=>{
         $('.proceedBtn').hide();
     }
 })
-
-$('#stuInfo input').keypress((e)=>{ // no spaces
+// No Spaces in Login Form Inputs
+$('#stuInfo input').keypress((e)=>{
     if (e.keyCode == 32) {
         e.returnValue = false;
         return false;
     }
 })
-
+// Quiz Function
 $.fn.quiz=(quiz)=>{
     $('#quizListing').hide();
     $('#quiz').show();
@@ -518,6 +493,7 @@ $.fn.quiz=(quiz)=>{
         $('#quizActive').show();
         showQuestions(0, quiz);
         $('#questLeft').html('<b>'+ 1 +'</b> of <b>' + quiz.length + '</b> Questions');
+        $.fn.play("#success");
     });
     $('.proceedBtn').click(()=>{
         $('#stuInfo').hide();
@@ -534,3 +510,12 @@ $.fn.quiz=(quiz)=>{
         $("#titlebar").html(quiz[0].category);
     })
 }
+// When result button is clicked
+$('#sBtn').click(()=>{
+    if(userScore >= 8){
+        $.fn.play("#pass");
+    } else {
+        $.fn.play("#fail");
+    }
+    window.close();
+})
