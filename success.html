@@ -21,7 +21,29 @@
             <button id="sBtn">Result</button> 
         </div>
     </div>
+    <audio id="fail" src="audio/laughter.mp3"></audio>
+    <audio id="pass" src="audio/applause.mp3"></audio>
     <script src="js/jquery.js"></script>
-    <script src="js/script.js"></script>
+    <script>
+        // When result button is clicked
+        let userScore = + localStorage.getItem('userScore');
+        $.fn.play=(sound)=>{
+            let x = $("" + sound + "")[0];
+            x.play();
+        }
+        $.fn.reset=(sound)=>{
+            let y = $("" + sound + "")[0];
+            y.pause();
+            y.currentTime = 0;
+        }
+        $('#sBtn').click(()=>{
+            if(userScore >= 8){
+                $.fn.play("#pass");
+            } else {
+                $.fn.play("#fail");
+            }
+            window.close();
+        })
+    </script>
 </body>
 </html>

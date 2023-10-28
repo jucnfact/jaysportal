@@ -458,6 +458,7 @@ showQuestions=(index, quiz)=>{
         else if(userScore >= 8){ quizResults.html(cResult)}
         else if(userScore >= 6){ quizResults.html(dResult)}
         else{ quizResults.html(fResult)}
+        localStorage.setItem('userScore', userScore);
         $('#quizResults').append("<div class='card instruction'><b>*</b> Please <b>do not retake</b> this assessment. It may block all your scores from submitting properly.</div><button onclick='exitQuiz()'>Exit</button>");
     }
     queCounter=(index)=>{
@@ -510,12 +511,3 @@ $.fn.quiz=(quiz)=>{
         $("#titlebar").html(quiz[0].category);
     })
 }
-// When result button is clicked
-$('#sBtn').click(()=>{
-    if(userScore >= 8){
-        $.fn.play("#pass");
-    } else {
-        $.fn.play("#fail");
-    }
-    window.close();
-})
