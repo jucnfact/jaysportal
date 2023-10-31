@@ -1,8 +1,13 @@
 // SOUND ENGINE:
 
-$.fn.play=(sound)=>{
+$.fn.play=(sound, loop)=>{
     let x = $("" + sound + "")[0];
     x.play();
+    if (loop == "loop") {
+        x.loop = true;
+    } else {
+        x.loop = false;
+    }
 }
 $.fn.reset=(sound)=>{
     let y = $("" + sound + "")[0];
@@ -18,6 +23,16 @@ document.onreadystatechange =()=>{
     } else {
         setTimeout(() => {
             $('loader').fadeOut(2000)
+            if (localStorage.getItem("exitQuiz") == "true") {
+                $('#pCode').val("142167");
+                $('#stuID').val("ekastu");
+                $('#log-submit').click();
+                $('#showTests').click();
+                $('#showTests').click();
+                setTimeout(() => {
+                    localStorage.removeItem("exitQuiz")
+                }, 100);
+            }
         }, 2000);
     }
     $('input').attr({'autocomplete': 'off', 'autocapitalized': 'false', 'spellcheck': 'false'});
@@ -331,8 +346,8 @@ $.fn.copy=(note)=>{
         $('#courses br').show();
         $.fn.reset("#hello");
     })
-    $('#note').hover(()=>{
-        $("#board").html(note[0].title);
+    $('#board').click(()=>{
+        $("#title").html(note[0].title);
     })
 }
 
@@ -360,17 +375,21 @@ showQuestions=(index, quiz)=>{
             showResult(); // Calling showResult function
             $.fn.play("#success");
             exitQuiz=()=>{
-                que_count = 0;
-                que_numb = 1;
-                userScore = 0;
-                $('#quizResults').hide();
-                $('.proceedBtn').hide();
-                $('#stuInfo input').val('')
-                $('#stuInfo').show();
-                $('#quiz').hide();
-                $('#quizListing').show();
-                $('#quiz').removeClass('resQuizCrd');
-                $("#nxtQuest").html('NEXT QUESTION');
+                localStorage.setItem("exitQuiz", "true");
+                location.reload();
+                // $.fn.reset("#pass");
+                // $.fn.reset("#fail");
+                // que_count = 0;
+                // que_numb = 1;
+                // userScore = 0;
+                // $('#quizResults').hide();
+                // $('.proceedBtn').hide();
+                // $('#stuInfo input').val('')
+                // $('#stuInfo').show();
+                // $('#quiz').hide();
+                // $('#quizListing').show();
+                // $('#quiz').removeClass('resQuizCrd');
+                // $("#nxtQuest").html('NEXT QUESTION');
             }
         }
     }
@@ -458,7 +477,11 @@ showQuestions=(index, quiz)=>{
         else if(userScore >= 8){ quizResults.html(cResult)}
         else if(userScore >= 6){ quizResults.html(dResult)}
         else{ quizResults.html(fResult)}
-        localStorage.setItem('userScore', userScore);
+        if(userScore >= 8){
+            $.fn.play("#pass", "loop");
+        } else {
+            $.fn.play("#fail", "loop");
+        }
         $('#quizResults').append("<div class='card instruction'><b>*</b> Please <b>do not retake</b> this assessment. It may block all your scores from submitting properly.</div><button onclick='exitQuiz()'>Exit</button>");
     }
     queCounter=(index)=>{
